@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser compatibility table</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        img, svg, object, embed, iframe {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        iframe {
+            overflow: hidden;
+            border: none;
+            width: 150px;
+            height: 150px;
+        }
+        td {
+            width: 150px;
+            height: 180px;
+            overflow: hidden;
+            text-align: center;
+            padding: 0;
+            border: 1px solid black;
+            position: relative;
+        }
+
+
+        text {
+            fill: #eee;
+            stroke: #00698D;
+        }
+
+        .sized {
+            font-size: 80;
+        }
+
+        .sizedPX {
+            font-size: 80px;
+        }
+
+        @keyframes rollingAnts {
+            from {
+                stroke-dashoffset: 0; }
+            to {
+                stroke-dashoffset: 30; } }
+
+        @keyframes spacing {
+            from {
+                letter-spacing: 0; }
+            to {
+                letter-spacing: -25px; } }
+        @keyframes subtleSpacing {
+            from {
+                letter-spacing: 0;
+                font-size: 15px; }
+            to {
+                letter-spacing: 2px;
+                font-size: 25px; } }
+        @keyframes blurBeat {
+            from {
+                filter: blur(5px);
+            }
+            to {
+                filter: blur(0px);
+            }
+        }
+
+        @keyframes increaseRadius {
+            from {
+                r: 37.5;
+            }
+            to {
+                r: 50;
+            }
+        }
+
+        @keyframes increaseImageSize {
+            from {
+                width: 75px;
+                height: 75px;
+                x: -37.5;
+                y: -37.5;
+            }
+            to {
+                width: 150px;
+                height: 150px;
+                x: -75;
+                y: -75;
+            }
+        }
+
+        .css::before, .js::before, .smil::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 20px;
+            color: #6f6d70;
+            font-weight: bold;
+            border-bottom-left-radius: 5px;
+            text-align: right;
+            padding: 3px 10px;
+        }
+
+        .css::before {
+            content: "CSS";
+            background-color: #a1ed32;
+        }
+        .smil::before {
+            content: "SMIL";
+            background-color: #ff4e0b;
+        }
+
+        .js::before {
+            content: "JS";
+            background-color: #eda63b;
+        }
+
+    </style>
+</head>
+<body>
+<h1>
+    SVG browser compatibility test
+</h1>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <img src="embedding.png" />
+            <p>
+                Raster
+            </p>
+        </td>
+        <td>
+            <svg
+                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:cc="http://creativecommons.org/ns#"
+                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                    xmlns:svg="http://www.w3.org/2000/svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="svg3397"
+                    viewBox="0 0 1200 1200"
+                    height="338.66666mm"
+                    width="338.66666mm">
+                <defs
+                        id="defs3399">
+                    <pattern
+                            patternUnits="userSpaceOnUse"
+                            width="2"
+                            height="1"
+                            patternTransform="translate(0,0) scale(10,10)"
+                            id="Strips1_1">
+                        <rect
+                                style="fill:black;stroke:none"
+                                x="0"
+                                y="-0.5"
+                                width="1"
+                                height="2"
+                                id="rect6447" />
+                    </pattern>
+                    <linearGradient
+                            id="linearGradient5504">
+                        <stop
+                                id="stop5506"
+                                offset="0"
+                                style="stop-color:#000000;stop-opacity:1" />
+                        <stop
+                                id="stop5508"
+                                offset="1"
+                                style="stop-color:#ffffff;stop-opacity:1" />
+                    </linearGradient>
+                    <marker
+                            style="overflow:visible"
+                            id="DiamondL"
+                            refX="0.0"
+                            refY="0.0"
+                            orient="auto">
+                        <path
+                                transform="scale(0.8)"
+                                style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                                d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+                                id="path4307" />
+                    </marker>
+                    <marker
+                            style="overflow:visible"
+                            id="DotL"
+                            refX="0.0"
+                            refY="0.0"
+                            orient="auto">
+                        <path
+                                transform="scale(0.8) translate(7.4, 1)"
+                                style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                                d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+                                id="path4289" />
+                    </marker>
+                    <clipPath
+                            id="clipPath3420"
+                            clipPathUnits="userSpaceOnUse">
+                        <path
+                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                d="M -75.714286,486.64793 C 5.714286,355.21935 135.71429,176.64793 228.57143,325.21935 321.42857,473.79078 371.42857,740.93364 557.14286,513.79078 742.85715,286.64793 820,236.64793 921.42857,332.36221 1022.8572,428.0765 975.71429,583.79078 1180,493.79078 c 204.2858,-90 -2.8571,767.14282 -2.8571,767.14282 l -1200.000043,0 z"
+                                id="path3422" />
+                    </clipPath>
+                    <linearGradient
+                            y2="459.5051"
+                            x2="597.14288"
+                            y1="843.79083"
+                            x1="597.14288"
+                            gradientUnits="userSpaceOnUse"
+                            id="linearGradient5546"
+                            xlink:href="#linearGradient5504" />
+                    <mask
+                            id="mask5542"
+                            maskUnits="userSpaceOnUse">
+                        <rect
+                                y="246.64796"
+                                x="-22.857143"
+                                height="1014.2856"
+                                width="1200"
+                                id="rect5544"
+                                style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5546);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:11.6, 23.2;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+                    </mask>
+                    <filter
+                            height="1.1303229"
+                            y="-0.065161451"
+                            width="1.1439546"
+                            x="-0.0719773"
+                            id="filter5724"
+                            style="color-interpolation-filters:sRGB">
+                        <feGaussianBlur
+                                id="feGaussianBlur5726"
+                                stdDeviation="12.337418" />
+                    </filter>
+                </defs>
+                <metadata
+                        id="metadata3402">
+                    <rdf:RDF>
+                        <cc:Work
+                                rdf:about="">
+                            <dc:format>image/svg+xml</dc:format>
+                            <dc:type
+                                    rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                            <dc:title></dc:title>
+                        </cc:Work>
+                    </rdf:RDF>
+                </metadata>
+                <g
+                        transform="translate(22.857143,-60.933636)"
+                        id="layer1">
+                    <image
+                            transform="translate(0,-141.42857)"
+                            mask="url(#mask5542)"
+                            clip-path="url(#clipPath3420)"
+                            width="1200"
+                            height="1200"
+                            preserveAspectRatio="none"
+                            xlink:href="billiard.png"
+                            id="image3413"
+                            x="-22.857143"
+                            y="60.933636" />
+                    <path
+                            id="path3416"
+                            d="M -24.908086,269.25997 C 35.812359,190.35932 142.28028,48.351338 228.57143,183.79078 322.71288,331.55176 371.42857,599.50507 557.14286,372.36221 742.85715,145.21936 820,95.219358 921.42857,190.93364 1022.8572,286.64793 975.71429,442.36221 1180,352.36221"
+                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:11.6, 23.2;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#DotL);marker-mid:url(#DiamondL);marker-end:url(#DotL)" />
+                    <text
+       id="text5548"
+       y="994.24609"
+       x="185.94496"
+       style="font-style:normal;font-weight:normal;font-size:625px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="994.24609"
+         x="185.94496"
+         id="tspan5550">S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:625px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5724)"
+       x="576.43817"
+       y="994.24609"
+       id="text5552"><tspan
+         id="tspan5554"
+         x="576.43817"
+         y="994.24609">V</tspan></text>
+    <text
+       id="text5584"
+       y="994.24609"
+       x="965.72388"
+       style="font-style:normal;font-weight:normal;font-size:625px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:url(#Strips1_1);fill-opacity:1.0;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="994.24609"
+         x="965.72388"
+         id="tspan5586">G</tspan></text>
+                </g>
+            </svg>
+            <p>
+                Inline SVG
+            </p>
+        </td>
+        <td>
+            <img src="embedding.svg" />
+            <p>
+                &lt;img&gt; tag
+            </p>
+        </td>
+        <td>
+            <img src="embedding.svgz" />
+            <p>
+                &lt;img&gt; tag, SVGZ
+            </p>
+        </td>
+        <td>
+            <object data="embedding.svg" type="image/svg+xml">
+                Not supported!
+            </object>
+            <p>
+                &lt;object&gt; tag
+            </p>
+        </td>
+        <td>
+            <embed src="embedding.svg" type="image/svg+xml">
+            </embed>
+            <p>
+                &lt;embed&gt; tag
+            </p>
+        </td>
+        <td>
+            <iframe src="embedding.svg">
+            </iframe>
+            <p>
+                &lt;iframe&gt; tag
+            </p>
+        </td>
+        <td>
+            <div style="width: 100%; height: 150px; background-image: url(embedding.svg); background-repeat: no-repeat;">
+
+            </div>
+            <p>
+                Background-image
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="css">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10; animation: rollingAnts; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: linear;">
+                    ??
+                </text>
+            </svg>
+            <p>
+                Dash animation
+            </p>
+        </td>
+        <td class="js">
+            <svg id="ants" viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10;">
+                    ??
+                </text>
+            </svg>
+
+            <p>
+                Dash animation
+            </p>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10; filter: url(#blur);">
+                    ??
+                </text>
+            </svg>
+            <p>
+                SVG filter
+            </p>
+        </td>
+        <td class="css">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10; animation: blurBeat; animation-iteration-count: infinite; animation-direction: alternate; animation-duration: 1s;">
+                    ??
+                </text>
+            </svg>
+            <p>
+                CSS filter animation
+            </p>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="textClip">
+                        <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10;">
+                            ??
+                        </text>
+                    </clipPath>
+                </defs>
+                <image xlink:href="billiard.png" width="150" height="150" x="-75" y="-75" clip-path="url(#textClip)"></image>
+            </svg>
+            <p>
+                Clipping
+            </p>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <mask id="textMask">
+                        <rect x="-75" y="-75" width="150" height="150" fill="black"></rect>
+                        <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="fill: white; stroke: none; filter: url(#blur);">
+                            ??
+                        </text>
+                    </mask>
+                </defs>
+                <image xlink:href="billiard.png" width="150" height="150" x="-75" y="-75" mask="url(#textMask)"></image>
+            </svg>
+            <p>
+                Masking
+            </p>
+        </td>
+        <td class="css">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <mask id="textEdgeMask">
+                        <rect x="-75" y="-75" width="150" height="150" fill="black"></rect>
+                        <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="fill: none; stroke: white; stroke-dasharray: 5 5 10 10; filter: url(#blur); animation: rollingAnts; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: linear;">
+                            ??
+                        </text>
+                    </mask>
+                </defs>
+                <image xlink:href="billiard.png" width="150" height="150" x="-75" y="-75" mask="url(#textEdgeMask)"></image>
+            </svg>
+            <p>
+                Combination
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text text-anchor="middle" x="0" y="40" style="font-size: 70">
+                    SVG
+                </text>
+            </svg>
+            <p>
+                Inline CSS size
+            </p>
+        </td>
+        <td>
+            <style type="text/css">
+
+            </style>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">3
+                <text text-anchor="middle" x="0" y="40" class="sized">
+                    SVG
+                </text>
+            </svg>
+            <p>
+                Embedded CSS size
+            </p>
+        </td>
+        <td>
+            <style type="text/css">
+
+            </style>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text text-anchor="middle" x="0" y="40" class="sizedPX">
+                    SVG
+                </text>
+            </svg>
+            <p>
+                Embedded CSS size (px)
+            </p>
+        </td>
+        <td class="css">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text text-anchor="middle" x="0" y="40" font-size="80" style="animation: spacing; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;">
+                    SVG
+                </text>
+            </svg>
+            <p>
+                Letter spacing animation
+            </p>
+        </td>
+        <td class="css">
+            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; animation: subtleSpacing; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!</textPath></text>
+                </g>
+            </svg>
+
+            <p>
+                Letter spacing animation on path
+            </p>
+        </td>
+        <td class="js">
+            <svg id="rollercoaster" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!</textPath></text>
+                </g>
+            </svg>
+
+            <p>
+                Text offset animation on path
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="js">
+            <svg id="polyline" viewBox="0 0 150 150" width="150px" height="150px">
+                <polyline style="stroke: black; stroke-width: 2px; fill: none;" points="25,25 50,150 75,10"></polyline>
+            </svg>
+            <p>
+                Polyline animation
+            </p>
+        </td>
+        <td class="js">
+            <svg id="path" viewBox="0 0 150 150" width="150px" height="150px">
+                <path style="stroke: black; stroke-width: 2px; fill: none;" d="M 28.418238,94.520359 C 9.6682386,56.127499 58.953953,23.448929 42.882524,46.841779 26.811095,70.234639 -3.0103329,99.163229 20.918238,107.19893 c 23.928572,8.0357 61.785715,-35.000001 49.464286,-41.250001 -12.321429,-6.25 -18.035714,57.142801 -5.714286,56.428601 12.321429,-0.7143 18.75,-51.428601 33.035715,-53.571461 14.285717,-2.14286 -6.785715,70.892861 13.035717,45.535661 19.82142,-25.357091 34.46428,-84.999951 21.25,-86.785661"></path>
+            </svg>
+            <p>
+                Path animation
+            </p>
+        </td>
+        <td class="smil">
+            <svg viewBox="0 0 150 150" width="150px" height="150px">
+                <path style="stroke: black; stroke-width: 2px; fill: none;" d="M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881">
+                    <animate attributeName="d"
+                             attributeType="XML"
+                             values="M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881; M 45.961941,23.730932 C 19.445437,7.3159528 18.435284,59.338809 28.789348,66.409877 c 10.354063,7.071068 25.75889,39.648483 3.282995,43.184023 -22.4758938,3.53553 -15.657364,-7.32361 1e-6,-2.0203 15.657364,5.3033 28.536809,6.06091 28.789347,2.0203 0.252538,-4.04061 -1.767767,-58.083773 1.515229,-58.58885 3.282996,-0.505076 7.576144,27.526657 10.354063,27.274119 2.77792,-0.252538 3.535534,-28.789347 6.313454,-28.789347 2.777919,0 3.030457,58.336308 6.565991,60.356618 3.535534,2.0203 10.85914,1.26269 12.626907,-0.75762 1.767765,-2.0203 5.808375,-63.639609 1.767765,-63.639609 -4.040608,0 0.75762,64.397229 4.79823,64.144689 4.04061,-0.25254 9.59645,-0.25254 12.37437,-1.76777 2.77791,-1.51523 -1.76777,-64.9023 1.01015,-64.649762 2.77792,0.252538 -6.06092,59.093922 -2.02031,61.366772 4.04061,2.27284 30.30458,-3.03046 31.31473,-6.313458 1.01015,-3.282996 -42.30014,10.101528 -42.0476,16.667518"
+                             keyTimes="0;1"
+                             repeatCount="indefinite"
+                             begin="0s"
+                             dur="5s"
+                             fill="freeze" />
+                </path>
+            </svg>
+            <p>
+                Path animation, varying anchor count
+            </p>
+        </td>
+        <td class="smil">
+            <svg viewBox="0 0 150 150" width="150px" height="150px">
+                <path style="stroke: black; stroke-width: 2px; fill: none;" d="M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881">
+                    <animate attributeName="d"
+                             attributeType="XML"
+                             values="M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881;
+                             M 28.418238,94.520359 C 9.6682386,56.127499 58.953953,23.448929 42.882524,46.841779 26.811095,70.234639 -3.0103329,99.163229 20.918238,107.19893 c 23.928572,8.0357 61.785715,-35.000001 49.464286,-41.250001 -12.321429,-6.25 -18.035714,57.142801 -5.714286,56.428601 12.321429,-0.7143 18.75,-51.428601 33.035715,-53.571461 14.285717,-2.14286 -6.785715,70.892861 13.035717,45.535661 19.82142,-25.357091 34.46428,-84.999951 21.25,-86.785661;
+                             M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881
+"
+                             keyTimes="0;0.5;1"
+                             repeatCount="indefinite"
+                             begin="0s"
+                             dur="5s"
+                             fill="freeze" />
+                </path>
+            </svg>
+            <p>
+                Path animation in &lt;svg&gt; tag
+            </p>
+        </td>
+        <td class="smil">
+            <img src="smilpath.svg" />
+            <p>
+                Path animation in &lt;img&gt; tag
+            </p>
+        </td>
+        <td class="smil">
+            <img src="pathtracker.svg" />
+            <p>
+                Motion path animation
+            </p>
+        </td>
+        <td class="smil">
+            <img src="squirm.svg" />
+            <p>
+                Text along an animated path
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="css">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="circleClipPath">
+                        <circle style="animation: increaseRadius; animation-timing-function: ease-in-out; animation-duration: 1s; animation-direction: alternate; animation-iteration-count: infinite;" r="37.5"></circle>
+                    </clipPath>
+                </defs>
+                <image style="animation: increaseImageSize; animation-timing-function: ease-in-out; animation-duration: 1s; animation-direction: alternate; animation-iteration-count: infinite;" clip-path="url(#circleClipPath)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75"></image>
+            </svg>
+            <p>
+                Embedded raster graphics
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="js">
+            <svg id="beating" viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="circleClipPathJS">
+                        <circle r="37.5"></circle>
+                    </clipPath>
+                </defs>
+                <image clip-path="url(#circleClipPathJS)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75"></image>
+            </svg>
+            <p>
+                Embedded raster graphics
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="smil">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="circleClipPathSmil">
+                        <circle r="37.5">
+                            <animate id="inhale"
+                                 attributeName="r"
+                                 attributeType="XML"
+                                 values="37.5; 50; 37.5"
+                                 calcMode="spline"
+                                 keyTimes="0;0.5;1"
+                                 keySplines=".5 0 .5 1; .5 0 .5 1 "
+                                 begin="0s" dur="2s"
+                                 fill="freeze" repeatCount="indefinite" />
+                        </circle>
+                    </clipPath>
+                </defs>
+                <image clip-path="url(#circleClipPathSmil)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75">
+                    <animate attributeName="x"
+                             attributeType="XML"
+                             values="-37.5; -75; -37.5"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+                    <animate attributeName="y"
+                             attributeType="XML"
+                             values="-37.5; -75; -37.5"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+                    <animate attributeName="width"
+                             attributeType="XML"
+                             values="75; 150; 75"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+                    <animate attributeName="height"
+                             attributeType="XML"
+                             values="75; 150; 75"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+
+                </image>
+            </svg>
+            <p>
+                Embedded raster graphics
+            </p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+    var dynamics = document.getElementsByClassName("dynamic");
+    var updateDynamics = function () {
+        var secs = new Date().getSeconds();
+        for(var i in dynamics){
+            dynamics[i].innerHTML = secs;
+        }
+    };
+    setInterval(updateDynamics, 5000);
+</script>
+<script type="text/javascript" src="node_modules/snapsvg/dist/snap.svg-min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<svg width="0" height="0">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        </filter>
+    </defs>
+</svg>
+</body>
+</html>

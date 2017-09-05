@@ -1,0 +1,6 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150" width="150" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<g transform="translate(0 -902.36)">
+<path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+<text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" font-size="40px" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%"><tspan font-size="20px">Text along a path! How exciting!</tspan></textPath></text>
+</g>
+</svg>

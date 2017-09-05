@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 150 150"
+   height="150"
+   width="150">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+
+  <path
+     id="flat"
+     d="m 3,108.76673 c 11.36,0 20.529143,1.35914 27.933428,1.64314 10.960062,0.42039 21.097143,-0.0405 32.660001,0.10145 13.428881,0.16492 34.688571,0.40572 46.657141,-0.10145 7.76297,-0.32894 15.43743,-3.91514 18.46001,-6.49143 6.9019,-5.882822 11.37352,-6.187141 14.01742,-5.375712"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.13600004px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+      <animate attributeName="d"
+               attributeType="XML"
+               values="m 3,108.76673 c 11.36,0 20.529143,1.35914 27.933428,1.64314 10.960062,0.42039 21.097143,-0.0405 32.660001,0.10145 13.428881,0.16492 34.688571,0.40572 46.657141,-0.10145 7.76297,-0.32894 15.43743,-3.91514 18.46001,-6.49143 6.9019,-5.882822 11.37352,-6.187141 14.01742,-5.375712;
+                m 26.856,109.90273 c 11.36,0 31.564571,3.55 31.564571,-13.490002 0,-17.04 -5.436571,-33.086 19.575715,-39.658571 17.37198,-4.5649 35.718464,9.850258 34.790004,22.517142 -0.568,7.749144 9.75722,20.775491 19.88,15.62 C 142.95743,89.650056 143,91 145,91.726728;
+                m 39.352,92.862728 c 11.36,-5.68 28.4,0 28.4,-17.04 0,-17.04 11.36,-28.4 28.4,-22.72 17.04,5.68 17.04,17.04 11.36,28.4 -5.68,11.36 0.14525,30.210772 11.36,28.400002 8.11267,-1.3099 11.71039,-0.18867 17.04,0;
+                m 3,108.76673 c 11.36,0 20.529143,1.35914 27.933428,1.64314 10.960062,0.42039 21.097143,-0.0405 32.660001,0.10145 13.428881,0.16492 34.688571,0.40572 46.657141,-0.10145 7.76297,-0.32894 15.43743,-3.91514 18.46001,-6.49143 6.9019,-5.882822 11.37352,-6.187141 14.01742,-5.375712
+" keyTimes="0;0.3;0.5;1" repeatCount="indefinite" begin="0s" dur="5s" fill="freeze" />
+  </path>
+  <text
+     id="text3368"
+     y="40"
+     x="10"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     xml:space="preserve"><tspan
+       y="40"
+       x="10"
+       id="tspan3370" /></text>
+  <text
+     id="text3372"
+     y="40.17857"
+     x="76.25"
+     style="font-size:14px;fill:#ff9955;font-style:normal;font-weight:normal;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff9955;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     xml:space="preserve">
+       <textPath xlink:href="#flat">Squirming away! Squirming away!</textPath></text>
+</svg>

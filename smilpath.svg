@@ -8,7 +8,7 @@
 "
                  keyTimes="0;0.5;1"
                  repeatCount="indefinite"
-                 begin="0s"
+                 begin="click"
                  dur="5s"
                  fill="freeze" />
     </path>

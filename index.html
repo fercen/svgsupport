@@ -612,6 +612,31 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
                 Text along an animated path
             </p>
         </td>
+        <td class="smil">
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <circle id="clickthecircle" r="30">
+                    <animate attributeName="r"
+                             attributeType="XML"
+                             begin="clickthecircle.click"
+                             dur="2s"
+                             values="30;60;30"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1"
+                             repeatCount="1"></animate>
+
+                </circle>
+            </svg>
+            <p>
+                Begin on click
+            </p>
+        </td>
+        <td class="smil">
+            <img src="animateonclick.svg" />
+            <p>
+                Begin on click &lt;img&gt;
+            </p>
+        </td>
     </tr>
     <tr>
         <td class="css">

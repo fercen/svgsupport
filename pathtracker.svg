@@ -10,32 +10,35 @@
    viewBox="0 0 150 150"
    height="150"
    width="150">
-  <defs
-     id="defs4" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
+  <defs>
+    <path
+            id="arrow"
+            d="m -15.178571,6.8214285 19.9999995,0 0,8.0000005 L 19.821429,-0.17857149 4.8214285,-15.178571 l 0,7.9999995 -19.9999995,0 z"
+            style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+
+    </path>
+  </defs>
+    <use href="#arrow">
+    <animateMotion
+            id="pathAnimation"
+            dur="5s"
+            repeatCount="indefinite"
+            rotate="auto">
+      <mpath href="#motionPath"></mpath>
+    </animateMotion>
+  </use>
+    <use href="#arrow">
+    <animateMotion
+            id="pathAnimation"
+            begin="2.5s"
+            dur="5s"
+            repeatCount="indefinite"
+            rotate="auto">
+      <mpath href="#motionPath"></mpath>
+    </animateMotion>
+  </use>
   <path
-     id="path3346"
-     d="m -15.178571,6.8214285 19.9999995,0 0,8.0000005 L 19.821429,-0.17857149 4.8214285,-15.178571 l 0,7.9999995 -19.9999995,0 z"
-     style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
-     <animateMotion
-         path="M 77.678571,17.678571 C 83.216969,33.537351 57.933001,50.537294 41.25,52.5 c -21.25,2.5 -55,30 -25,65 C 46.25,152.5 75,15.535714 120,70.535714 165,125.53571 135,125 85,125 35,125 3.2835104,47.976536 26.72258,13.035714 36.224081,-1.1282557 72.055231,1.5765648 77.678571,17.678571 Z"
-          dur="5s"
-          repeatCount="indefinite"
-          rotate="auto" />
-  </path>
-  <path
-     id="path3348"
+     id="motionPath"
      d="M 77.678571,17.678571 C 83.216969,33.537351 57.933001,50.537294 41.25,52.5 c -21.25,2.5 -55,30 -25,65 C 46.25,152.5 75,15.535714 120,70.535714 165,125.53571 135,125 85,125 35,125 3.2835104,47.976536 26.72258,13.035714 36.224081,-1.1282557 72.055231,1.5765648 77.678571,17.678571 Z"
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
 </svg>

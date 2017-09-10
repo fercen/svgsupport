@@ -118,6 +118,30 @@
              }
         }
 
+        @keyframes rollercoaster {
+            from {
+                startOffset: 30%;
+            }
+            to {
+                startOffset: 70%;
+            }
+        }
+
+        @keyframes gradientwave {
+            from {
+                offset: 10%;
+            }
+            to {
+                offset: 90%;
+            }
+        }
+
+        .animate {
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
         .css::before, .js::before, .smil::before {
             position: absolute;
             top: 0;
@@ -142,6 +166,16 @@
         .js::before {
             content: "JS";
             background-color: #eda63b;
+        }
+
+        .stop1 {
+            stop-color: white;
+        }
+        .stop2 {
+            stop-color: #08495a;
+        }
+        .stop3 {
+            stop-color: white;
         }
 
     </style>
@@ -472,8 +506,10 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
             </p>
         </td>
         <td class="smil">
-            <div style="clip-path: url(#concentric); height: 150px;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis corporis culpa dolorum exercitationem ipsa iusto labore minus non odio possimus provident quas quidem, reprehenderit similique soluta tenetur ullam, vitae?
+            <div style="clip-path: url(#concentric); height: 150px; background-color: #08495a; color: white; font-family: monospace;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis corporis culpa dolorum exercitationem ipsa iusto labore minus non odio possimus provident quas quidem, reprehenderit similique soluta tenetur ullam, vitae?
+                </p>
             </div>
             <p>
                 Clipping a &lt;div&gt;
@@ -540,17 +576,13 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
                 Letter spacing animation on path
             </p>
         </td>
-        <td class="js">
-            <svg id="rollercoaster" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
-                <g transform="translate(0 -902.36)">
-                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
-                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!</textPath></text>
-                </g>
-            </svg>
-
-            <p>
-                Text offset animation on path
-            </p>
+        <td>
+            <img src="apng.png">
+            Animated PNG file
+        </td>
+        <td>
+            <canvas width="150px" height="150px" id="canvas">Canvas not supported.</canvas>
+            Canvas
         </td>
     </tr>
     <tr>
@@ -562,27 +594,7 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
                 Polyline animation
             </p>
         </td>
-        <td class="smil">
-            <svg viewBox="0 0 150 150" width="150px" height="150px">
-                <path style="stroke: black; stroke-width: 2px; fill: none;" d="M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881">
-                    <animate attributeName="d"
-                             attributeType="XML"
-                             values="M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881;
-                             M 28.418238,94.520359 C 9.6682386,56.127499 58.953953,23.448929 42.882524,46.841779 26.811095,70.234639 -3.0103329,99.163229 20.918238,107.19893 c 23.928572,8.0357 61.785715,-35.000001 49.464286,-41.250001 -12.321429,-6.25 -18.035714,57.142801 -5.714286,56.428601 12.321429,-0.7143 18.75,-51.428601 33.035715,-53.571461 14.285717,-2.14286 -6.785715,70.892861 13.035717,45.535661 19.82142,-25.357091 34.46428,-84.999951 21.25,-86.785661;
-                             M 7.4575727,89.217058 C 18.254535,104.86736 38.631902,115.29821 46.418058,88.005495 51.559832,69.982101 -8.9114372,49.819194 41.373827,34.720485 c 22.539381,-6.767699 19.600116,81.110175 33.049307,77.947995 9.396851,-2.20939 20.855159,-73.924488 33.176586,-74.638688 12.32143,-0.7143 9.91117,3.877251 24.19688,1.734391 14.28572,-2.14286 -37.114358,46.684255 -21.05693,74.577547 5.17421,8.9881 51.63687,-34.239786 12.41117,-35.267881
-"
-                             keyTimes="0;0.5;1"
-                             repeatCount="indefinite"
-                             begin="0"
-                             dur="5s"
-                             fill="freeze" />
-                </path>
-            </svg>
-            <p>
-                Path animation in &lt;svg&gt; tag
-            </p>
-        </td>
-        <td class="smil">
+        <td class="click smil">
             <img src="smilpath.svg" />
             <p>
                 Path animation in &lt;img&gt; tag
@@ -629,7 +641,37 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
         <svg viewBox="0 0 150 150" width="150px" height="150px">
             <path class="strokedPath"style="animation: morph; animation-duration: 3s; animation-iteration-count: infinite;" d="M 38.996094 37.910156 C 34.941614 37.910156 31.558413 39.281559 28.845703 42.023438 C 26.132994 44.736147 24.775391 48.440522 24.775391 53.136719 L 24.775391 60.400391 L 17.119141 60.400391 L 17.119141 66.525391 L 24.775391 66.525391 L 24.775391 105.20312 L 31.908203 105.20312 L 31.908203 66.525391 L 42.408203 66.525391 L 42.408203 60.400391 L 31.908203 60.400391 L 31.908203 53.486328 C 31.908203 47.156672 34.416539 43.992188 39.433594 43.992188 C 41.212898 43.992187 42.803017 44.386267 44.203125 45.173828 L 44.203125 38.699219 C 42.919692 38.174178 41.183762 37.910156 38.996094 37.910156 z M 117.44531 38.873047 L 117.44531 105.20312 L 124.62109 105.20312 L 124.62109 38.873047 L 117.44531 38.873047 z M 99.417969 39.705078 C 98.134536 39.705078 97.040955 40.15631 96.136719 41.060547 C 95.232482 41.935614 94.78125 43.044948 94.78125 44.386719 C 94.78125 45.728489 95.232482 46.835869 96.136719 47.710938 C 97.040955 48.586005 98.134536 49.023438 99.417969 49.023438 C 100.73057 49.023438 101.8399 48.572205 102.74414 47.667969 C 103.67755 46.763732 104.14453 45.670151 104.14453 44.386719 C 104.14453 43.044948 103.67755 41.935614 102.74414 41.060547 C 101.8399 40.15631 100.73057 39.705078 99.417969 39.705078 z M 66.341797 59.349609 C 60.59552 59.349609 55.519742 60.750565 51.115234 63.550781 L 51.115234 70.900391 C 55.461404 67.225107 60.332265 65.388672 65.728516 65.388672 C 71.883158 65.388672 74.960938 69.193553 74.960938 76.806641 L 61.529297 78.689453 C 51.670202 80.060392 46.740234 84.931254 46.740234 93.302734 C 46.740234 97.21137 47.993426 100.34631 50.501953 102.70898 C 53.039649 105.07167 56.541062 106.25391 61.003906 106.25391 C 67.071042 106.25391 71.664082 103.57021 74.785156 98.203125 L 74.960938 98.203125 L 74.960938 105.20312 L 82.136719 105.20312 L 82.136719 76.064453 C 82.136719 64.921925 76.871778 59.349609 66.341797 59.349609 z M 95.744141 60.400391 L 95.744141 105.20312 L 102.91992 105.20312 L 102.91992 60.400391 L 95.744141 60.400391 z M 74.960938 82.539062 L 74.960938 87.001953 C 74.960938 90.823082 73.794451 93.987566 71.460938 96.496094 C 69.156592 98.975451 66.224624 100.21484 62.666016 100.21484 C 60.069982 100.21484 57.985278 99.529141 56.410156 98.158203 C 54.864204 96.758094 54.089844 94.965012 54.089844 92.777344 C 54.089844 89.772945 54.937109 87.688242 56.628906 86.521484 C 58.320704 85.325559 60.82904 84.494047 64.154297 84.027344 L 74.960938 82.539062 z "></path>
         </svg>
+        <p>
+            Path morphing
+        </p>
     </td>
+        <td class="css">
+            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath style="animation: rollercoaster;" xlink:href="#a" startOffset="50%" class="animate">Text along a path! How exciting!</textPath></text>
+                </g>
+            </svg>
+
+            <p>
+                Text offset animation on path
+            </p>
+        </td>
+        <td class="css">
+            <svg viewBox="-75 -75 150 150">
+                <defs>
+                    <radialGradient id="gradientCSS">
+                        <stop class="stop1" offset="0%" />
+                        <stop style="animation: gradientwave;" class="stop2 animate" />
+                        <stop class="stop3" offset="100%" />
+                    </radialGradient>
+                </defs>
+                <text style="fill:url(#gradientCSS);" font-size="80" text-anchor="middle" y="20">SVG</text>
+            </svg>
+            <p>
+                Gradient offset animation
+            </p>
+        </td>
     </tr>
     <tr>
         <td class="js">
@@ -662,6 +704,33 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
             </svg>
             <p>
                 Path morphing
+            </p>
+        </td>
+        <td class="js">
+            <svg id="rollercoaster" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!</textPath></text>
+                </g>
+            </svg>
+
+            <p>
+                Text offset animation on path
+            </p>
+        </td>
+        <td class="js">
+            <svg id="gradientOffset" viewBox="-75 -75 150 150">
+                <defs>
+                    <radialGradient id="gradientJS">
+                        <stop class="stop1" offset="0%" />
+                        <stop id="offsetTweak" class="stop2" />
+                        <stop class="stop3" offset="100%" />
+                    </radialGradient>
+                </defs>
+                <text style="fill:url(#gradientJS);" font-size="80" text-anchor="middle" y="20">SVG</text>
+            </svg>
+            <p>
+                Gradient offset animation
             </p>
         </td>
     </tr>
@@ -759,7 +828,6 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
                              keyTimes="0;.33;.67;1"
                              repeatCount="indefinite"
                              calcMode="spline"
-                             keyTimes="0;.33;.66;1"
                              keySplines=".5 0 .5 1; .5 0 .5 1 ; .5 0 .5 1 "
                              begin="0s"
                              dur="3s"
@@ -771,15 +839,40 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
                 Path morphing
             </p>
         </td>
-    </tr>
-    <tr>
-        <td>
-            <img src="apng.png">
-            Animated PNG file
+        <td class="smil">
+            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!<animate attributeName="startOffset" attributeType="XML" values="30%;70%;30%" calcMode="spline" keyTimes="0;0.5;1" keySplines=".5 0 .5 1; .5 0 .5 1 " begin="0s" dur="2s" repeatCount="indefinite" fill="freeze">
+
+                    </animate></textPath></text>
+                </g>
+            </svg>
+
+            <p>
+                Text offset animation on path
+            </p>
         </td>
-        <td>
-            <canvas width="150px" height="150px" id="canvas">Canvas not supported.</canvas>
-            Canvas
+        <td class="smil">
+            <svg viewBox="-75 -75 150 150">
+                <defs>
+                    <radialGradient id="gradient">
+                        <stop class="stop1" offset="0%" />
+                        <stop class="stop2">
+                            <animate attributeName="offset"
+                                     attributeType="XML"
+                                     values="10%;90%;10%"
+                                     calcMode="spline" keyTimes="0;0.5;1" keySplines=".5 0 .5 1; .5 0 .5 1"
+                                     begin="0s" dur="1s" repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop class="stop3" offset="100%" />
+                    </radialGradient>
+                </defs>
+                <text style="fill:url(#gradient);" font-size="80" text-anchor="middle" y="20">SVG</text>
+            </svg>
+            <p>
+                Gradient offset animation
+            </p>
         </td>
     </tr>
     </tbody>

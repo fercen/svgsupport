@@ -15,7 +15,7 @@ let rollercoasterAnimate = function() {
 
     text.animate({
         startOffset: target
-    }, 2000, mina.elastic, rollercoasterAnimate);
+    }, 1000, mina.easeinout, rollercoasterAnimate);
     rollercoasterStatus = !rollercoasterStatus;
 };
 
@@ -116,3 +116,21 @@ const initializeCanvas = function () {
 
 
 }();
+
+
+let gradientOffset = Snap("#gradientOffset");
+
+let gradientStop = gradientOffset.select("#offsetTweak");
+
+let offsets = [10, 90];
+let offsetsIndex = 0;
+let offsetAnimate = function () {
+    let curval = offsets[offsetsIndex];
+    offsetsIndex++;
+    offsetsIndex %= offsets.length;
+    let nextval = offsets[offsetsIndex];
+    Snap.animate(curval, nextval, function (val) {
+        gradientStop.attr({offset: `${val}%`});
+    }, 1000, mina.easeinout, offsetAnimate);
+};
+offsetAnimate();

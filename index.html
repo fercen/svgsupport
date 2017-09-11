@@ -10,7 +10,32 @@
         table {
             border: 1px solid black;
             border-collapse: collapse;
+            margin-bottom: 1em;
         }
+
+        caption {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+            vertical-align: bottom;
+        }
+
+        td:first-child {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            width: 30px;
+        }
+        #animations td:first-child p {
+            transform: rotate(-90deg);
+        }
+
         img, svg, object, embed, iframe, td>div {
             width: 100%;
             height: auto;
@@ -177,156 +202,187 @@
         .stop3 {
             stop-color: white;
         }
+        .csscircle {
+            r: 5px;
+        }
 
+        .cssfont {
+            font-size: 10px;
+            stroke: none;
+            fill: #08495a;
+        }
     </style>
 </head>
 <body>
 <h1>
-    SVG browser compatibility test
+    SVG browser support test
 </h1>
 <table>
-    <tbody>
+    <caption>
+        1. Basic display support
+    </caption>
+    <thead>
     <tr>
-        <td>
-            <img src="embedding.png" />
-            <p>
-                Raster
-            </p>
-        </td>
-        <td>
-            <svg
-                    xmlns:dc="http://purl.org/dc/elements/1.1/"
-                    xmlns:cc="http://creativecommons.org/ns#"
-                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:svg="http://www.w3.org/2000/svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    version="1.1"
-                    id="svg3397"
-                    viewBox="0 0 1200 1200"
-                    height="338.66666mm"
-                    width="338.66666mm">
-                <defs
-                        id="defs3399">
-                    <pattern
-                            patternUnits="userSpaceOnUse"
-                            width="2"
-                            height="1"
-                            patternTransform="translate(0,0) scale(10,10)"
-                            id="Strips1_1">
-                        <rect
-                                style="fill:black;stroke:none"
-                                x="0"
-                                y="-0.5"
-                                width="1"
-                                height="2"
-                                id="rect6447" />
-                    </pattern>
-                    <linearGradient
-                            id="linearGradient5504">
-                        <stop
-                                id="stop5506"
-                                offset="0"
-                                style="stop-color:#000000;stop-opacity:1" />
-                        <stop
-                                id="stop5508"
-                                offset="1"
-                                style="stop-color:#ffffff;stop-opacity:1" />
-                    </linearGradient>
-                    <marker
-                            style="overflow:visible"
-                            id="DiamondL"
-                            refX="0.0"
-                            refY="0.0"
-                            orient="auto">
-                        <path
-                                transform="scale(0.8)"
-                                style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-                                d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
-                                id="path4307" />
-                    </marker>
-                    <marker
-                            style="overflow:visible"
-                            id="DotL"
-                            refX="0.0"
-                            refY="0.0"
-                            orient="auto">
-                        <path
-                                transform="scale(0.8) translate(7.4, 1)"
-                                style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-                                d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
-                                id="path4289" />
-                    </marker>
-                    <clipPath
-                            id="clipPath3420"
-                            clipPathUnits="userSpaceOnUse">
-                        <path
-                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                                d="M -75.714286,486.64793 C 5.714286,355.21935 135.71429,176.64793 228.57143,325.21935 321.42857,473.79078 371.42857,740.93364 557.14286,513.79078 742.85715,286.64793 820,236.64793 921.42857,332.36221 1022.8572,428.0765 975.71429,583.79078 1180,493.79078 c 204.2858,-90 -2.8571,767.14282 -2.8571,767.14282 l -1200.000043,0 z"
-                                id="path3422" />
-                    </clipPath>
-                    <linearGradient
-                            y2="459.5051"
-                            x2="597.14288"
-                            y1="843.79083"
-                            x1="597.14288"
-                            gradientUnits="userSpaceOnUse"
-                            id="linearGradient5546"
-                            xlink:href="#linearGradient5504" />
-                    <mask
-                            id="mask5542"
-                            maskUnits="userSpaceOnUse">
-                        <rect
-                                y="246.64796"
-                                x="-22.857143"
-                                height="1014.2856"
+        <th></th>
+        <th>
+            1
+        </th>
+        <th>
+            2
+        </th>
+        <th>
+            3
+        </th>
+        <th>
+            4
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <img src="embedding.png" />
+                <p>
+                    Raster
+                </p>
+            </td>
+            <td>
+                <svg
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        id="svg3397"
+                        viewBox="0 0 1200 1200"
+                        height="338.66666mm"
+                        width="338.66666mm">
+                    <defs
+                            id="defs3399">
+                        <pattern
+                                patternUnits="userSpaceOnUse"
+                                width="2"
+                                height="1"
+                                patternTransform="translate(0,0) scale(10,10)"
+                                id="Strips1_1">
+                            <rect
+                                    style="fill:black;stroke:none"
+                                    x="0"
+                                    y="-0.5"
+                                    width="1"
+                                    height="2"
+                                    id="rect6447" />
+                        </pattern>
+                        <linearGradient
+                                id="linearGradient5504">
+                            <stop
+                                    id="stop5506"
+                                    offset="0"
+                                    style="stop-color:#000000;stop-opacity:1" />
+                            <stop
+                                    id="stop5508"
+                                    offset="1"
+                                    style="stop-color:#ffffff;stop-opacity:1" />
+                        </linearGradient>
+                        <marker
+                                style="overflow:visible"
+                                id="DiamondL"
+                                refX="0.0"
+                                refY="0.0"
+                                orient="auto">
+                            <path
+                                    transform="scale(0.8)"
+                                    style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                                    d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+                                    id="path4307" />
+                        </marker>
+                        <marker
+                                style="overflow:visible"
+                                id="DotL"
+                                refX="0.0"
+                                refY="0.0"
+                                orient="auto">
+                            <path
+                                    transform="scale(0.8) translate(7.4, 1)"
+                                    style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                                    d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+                                    id="path4289" />
+                        </marker>
+                        <clipPath
+                                id="clipPath3420"
+                                clipPathUnits="userSpaceOnUse">
+                            <path
+                                    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="M -75.714286,486.64793 C 5.714286,355.21935 135.71429,176.64793 228.57143,325.21935 321.42857,473.79078 371.42857,740.93364 557.14286,513.79078 742.85715,286.64793 820,236.64793 921.42857,332.36221 1022.8572,428.0765 975.71429,583.79078 1180,493.79078 c 204.2858,-90 -2.8571,767.14282 -2.8571,767.14282 l -1200.000043,0 z"
+                                    id="path3422" />
+                        </clipPath>
+                        <linearGradient
+                                y2="459.5051"
+                                x2="597.14288"
+                                y1="843.79083"
+                                x1="597.14288"
+                                gradientUnits="userSpaceOnUse"
+                                id="linearGradient5546"
+                                xlink:href="#linearGradient5504" />
+                        <mask
+                                id="mask5542"
+                                maskUnits="userSpaceOnUse">
+                            <rect
+                                    y="246.64796"
+                                    x="-22.857143"
+                                    height="1014.2856"
+                                    width="1200"
+                                    id="rect5544"
+                                    style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5546);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:11.6, 23.2;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+                        </mask>
+                        <filter
+                                height="1.1303229"
+                                y="-0.065161451"
+                                width="1.1439546"
+                                x="-0.0719773"
+                                id="filter5724"
+                                style="color-interpolation-filters:sRGB">
+                            <feGaussianBlur
+                                    id="feGaussianBlur5726"
+                                    stdDeviation="12.337418" />
+                        </filter>
+                    </defs>
+                    <metadata
+                            id="metadata3402">
+                        <rdf:RDF>
+                            <cc:Work
+                                    rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type
+                                        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title></dc:title>
+                            </cc:Work>
+                        </rdf:RDF>
+                    </metadata>
+                    <g
+                            transform="translate(22.857143,-60.933636)"
+                            id="layer1">
+                        <image
+                                transform="translate(0,-141.42857)"
+                                mask="url(#mask5542)"
+                                clip-path="url(#clipPath3420)"
                                 width="1200"
-                                id="rect5544"
-                                style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5546);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:11.6, 23.2;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-                    </mask>
-                    <filter
-                            height="1.1303229"
-                            y="-0.065161451"
-                            width="1.1439546"
-                            x="-0.0719773"
-                            id="filter5724"
-                            style="color-interpolation-filters:sRGB">
-                        <feGaussianBlur
-                                id="feGaussianBlur5726"
-                                stdDeviation="12.337418" />
-                    </filter>
-                </defs>
-                <metadata
-                        id="metadata3402">
-                    <rdf:RDF>
-                        <cc:Work
-                                rdf:about="">
-                            <dc:format>image/svg+xml</dc:format>
-                            <dc:type
-                                    rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                            <dc:title></dc:title>
-                        </cc:Work>
-                    </rdf:RDF>
-                </metadata>
-                <g
-                        transform="translate(22.857143,-60.933636)"
-                        id="layer1">
-                    <image
-                            transform="translate(0,-141.42857)"
-                            mask="url(#mask5542)"
-                            clip-path="url(#clipPath3420)"
-                            width="1200"
-                            height="1200"
-                            preserveAspectRatio="none"
-                            xlink:href="billiard.png"
-                            id="image3413"
-                            x="-22.857143"
-                            y="60.933636" />
-                    <path
-                            id="path3416"
-                            d="M -24.908086,269.25997 C 35.812359,190.35932 142.28028,48.351338 228.57143,183.79078 322.71288,331.55176 371.42857,599.50507 557.14286,372.36221 742.85715,145.21936 820,95.219358 921.42857,190.93364 1022.8572,286.64793 975.71429,442.36221 1180,352.36221"
-                            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:11.6, 23.2;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#DotL);marker-mid:url(#DiamondL);marker-end:url(#DotL)" />
-                    <text
+                                height="1200"
+                                preserveAspectRatio="none"
+                                xlink:href="billiard.png"
+                                id="image3413"
+                                x="-22.857143"
+                                y="60.933636" />
+                        <path
+                                id="path3416"
+                                d="M -24.908086,269.25997 C 35.812359,190.35932 142.28028,48.351338 228.57143,183.79078 322.71288,331.55176 371.42857,599.50507 557.14286,372.36221 742.85715,145.21936 820,95.219358 921.42857,190.93364 1022.8572,286.64793 975.71429,442.36221 1180,352.36221"
+                                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:11.6, 23.2;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#DotL);marker-mid:url(#DiamondL);marker-end:url(#DotL)" />
+                        <text
        id="text5548"
        y="994.24609"
        x="185.94496"
@@ -353,57 +409,331 @@
          y="994.24609"
          x="965.72388"
          id="tspan5586">G</tspan></text>
+                    </g>
+                </svg>
+                <p>
+                    Inline SVG
+                </p>
+            </td>
+            <td>
+                <img src="embedding.svg" />
+                <p>
+                    &lt;img&gt; tag
+                </p>
+            </td>
+            <td>
+                <img src="embedding.svgz" />
+                <p>
+                    &lt;img&gt; tag, SVGZ
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>2</p>
+            </td>
+            <td>
+                <object data="embedding.svg" type="image/svg+xml">
+                    Not supported!
+                </object>
+                <p>
+                    &lt;object&gt; tag
+                </p>
+            </td>
+            <td>
+                <embed src="embedding.svg" type="image/svg+xml">
+                </embed>
+                <p>
+                    &lt;embed&gt; tag
+                </p>
+            </td>
+            <td>
+                <iframe src="embedding.svg">
+                </iframe>
+                <p>
+                    &lt;iframe&gt; tag
+                </p>
+            </td>
+            <td>
+                <div style="width: 100%; height: 150px; background-image: url(embedding.svg); background-repeat: no-repeat;">
+
+                </div>
+                <p>
+                    Background-image
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table id="animations">
+    <caption>
+        2. Animation Support
+    </caption>
+    <thead>
+    <tr>
+        <th></th>
+        <th>
+            Embedded raster graphics
+        </th>
+        <th>
+            Dashed stroke
+        </th>
+        <th>
+            Path morphing
+        </th>
+        <th>
+            Text on path
+        </th>
+        <th>
+            Gradient
+        </th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>CSS</p></td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="circleClipPath">
+                        <circle style="animation: increaseRadius; animation-timing-function: ease-in-out; animation-duration: 1s; animation-direction: alternate; animation-iteration-count: infinite;" r="37.5"></circle>
+                    </clipPath>
+                </defs>
+                <image style="animation: increaseImageSize; animation-timing-function: ease-in-out; animation-duration: 1s; animation-direction: alternate; animation-iteration-count: infinite;" clip-path="url(#circleClipPath)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75"></image>
+            </svg>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10; animation: rollingAnts; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: linear;">
+                    ??
+                </text>
+            </svg>
+        </td>
+        <td>
+            <svg viewBox="0 0 150 150" width="150px" height="150px">
+                <path class="strokedPath"style="animation: morph; animation-duration: 3s; animation-iteration-count: infinite;" d="M 38.996094 37.910156 C 34.941614 37.910156 31.558413 39.281559 28.845703 42.023438 C 26.132994 44.736147 24.775391 48.440522 24.775391 53.136719 L 24.775391 60.400391 L 17.119141 60.400391 L 17.119141 66.525391 L 24.775391 66.525391 L 24.775391 105.20312 L 31.908203 105.20312 L 31.908203 66.525391 L 42.408203 66.525391 L 42.408203 60.400391 L 31.908203 60.400391 L 31.908203 53.486328 C 31.908203 47.156672 34.416539 43.992188 39.433594 43.992188 C 41.212898 43.992187 42.803017 44.386267 44.203125 45.173828 L 44.203125 38.699219 C 42.919692 38.174178 41.183762 37.910156 38.996094 37.910156 z M 117.44531 38.873047 L 117.44531 105.20312 L 124.62109 105.20312 L 124.62109 38.873047 L 117.44531 38.873047 z M 99.417969 39.705078 C 98.134536 39.705078 97.040955 40.15631 96.136719 41.060547 C 95.232482 41.935614 94.78125 43.044948 94.78125 44.386719 C 94.78125 45.728489 95.232482 46.835869 96.136719 47.710938 C 97.040955 48.586005 98.134536 49.023438 99.417969 49.023438 C 100.73057 49.023438 101.8399 48.572205 102.74414 47.667969 C 103.67755 46.763732 104.14453 45.670151 104.14453 44.386719 C 104.14453 43.044948 103.67755 41.935614 102.74414 41.060547 C 101.8399 40.15631 100.73057 39.705078 99.417969 39.705078 z M 66.341797 59.349609 C 60.59552 59.349609 55.519742 60.750565 51.115234 63.550781 L 51.115234 70.900391 C 55.461404 67.225107 60.332265 65.388672 65.728516 65.388672 C 71.883158 65.388672 74.960938 69.193553 74.960938 76.806641 L 61.529297 78.689453 C 51.670202 80.060392 46.740234 84.931254 46.740234 93.302734 C 46.740234 97.21137 47.993426 100.34631 50.501953 102.70898 C 53.039649 105.07167 56.541062 106.25391 61.003906 106.25391 C 67.071042 106.25391 71.664082 103.57021 74.785156 98.203125 L 74.960938 98.203125 L 74.960938 105.20312 L 82.136719 105.20312 L 82.136719 76.064453 C 82.136719 64.921925 76.871778 59.349609 66.341797 59.349609 z M 95.744141 60.400391 L 95.744141 105.20312 L 102.91992 105.20312 L 102.91992 60.400391 L 95.744141 60.400391 z M 74.960938 82.539062 L 74.960938 87.001953 C 74.960938 90.823082 73.794451 93.987566 71.460938 96.496094 C 69.156592 98.975451 66.224624 100.21484 62.666016 100.21484 C 60.069982 100.21484 57.985278 99.529141 56.410156 98.158203 C 54.864204 96.758094 54.089844 94.965012 54.089844 92.777344 C 54.089844 89.772945 54.937109 87.688242 56.628906 86.521484 C 58.320704 85.325559 60.82904 84.494047 64.154297 84.027344 L 74.960938 82.539062 z "></path>
+            </svg>
+
+        </td>
+        <td>
+            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath style="animation: rollercoaster;" xlink:href="#a" startOffset="50%" class="animate">Text along a path! How exciting!</textPath></text>
                 </g>
             </svg>
-            <p>
-                Inline SVG
-            </p>
-        </td>
-        <td>
-            <img src="embedding.svg" />
-            <p>
-                &lt;img&gt; tag
-            </p>
-        </td>
-        <td>
-            <img src="embedding.svgz" />
-            <p>
-                &lt;img&gt; tag, SVGZ
-            </p>
-        </td>
-        <td>
-            <object data="embedding.svg" type="image/svg+xml">
-                Not supported!
-            </object>
-            <p>
-                &lt;object&gt; tag
-            </p>
-        </td>
-        <td>
-            <embed src="embedding.svg" type="image/svg+xml">
-            </embed>
-            <p>
-                &lt;embed&gt; tag
-            </p>
-        </td>
-        <td>
-            <iframe src="embedding.svg">
-            </iframe>
-            <p>
-                &lt;iframe&gt; tag
-            </p>
-        </td>
-        <td>
-            <div style="width: 100%; height: 150px; background-image: url(embedding.svg); background-repeat: no-repeat;">
 
-            </div>
-            <p>
-                Background-image
-            </p>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150">
+                <defs>
+                    <radialGradient id="gradientCSS">
+                        <stop class="stop1" offset="0%" />
+                        <stop style="animation: gradientwave;" class="stop2 animate" />
+                        <stop class="stop3" offset="100%" />
+                    </radialGradient>
+                </defs>
+                <text style="fill:url(#gradientCSS);" font-size="80" text-anchor="middle" y="20">SVG</text>
+            </svg>
         </td>
     </tr>
     <tr>
+        <td>
+            <p>
+                JS
+            </p>
+        </td>
+        <td>
+            <svg id="beating" viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="circleClipPathJS">
+                        <circle r="37.5"></circle>
+                    </clipPath>
+                </defs>
+                <image clip-path="url(#circleClipPathJS)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75"></image>
+            </svg>
 
+        </td>
+        <td>
+            <svg id="ants" viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10;">
+                    ??
+                </text>
+            </svg>
+        </td>
+        <td>
+            <svg id="jsMorph" viewBox="0 0 150 150" width="150px" height="150px">
+                <path style="stroke: black; stroke-width: 2px; fill: none;" d="M 38.996094 37.910156 C 34.941614 37.910156 31.558413 39.281559 28.845703 42.023438 C 26.132994 44.736147 24.775391 48.440522 24.775391 53.136719 L 24.775391 60.400391 L 17.119141 60.400391 L 17.119141 66.525391 L 24.775391 66.525391 L 24.775391 105.20312 L 31.908203 105.20312 L 31.908203 66.525391 L 42.408203 66.525391 L 42.408203 60.400391 L 31.908203 60.400391 L 31.908203 53.486328 C 31.908203 47.156672 34.416539 43.992188 39.433594 43.992188 C 41.212898 43.992187 42.803017 44.386267 44.203125 45.173828 L 44.203125 38.699219 C 42.919692 38.174178 41.183762 37.910156 38.996094 37.910156 z M 117.44531 38.873047 L 117.44531 105.20312 L 124.62109 105.20312 L 124.62109 38.873047 L 117.44531 38.873047 z M 99.417969 39.705078 C 98.134536 39.705078 97.040955 40.15631 96.136719 41.060547 C 95.232482 41.935614 94.78125 43.044948 94.78125 44.386719 C 94.78125 45.728489 95.232482 46.835869 96.136719 47.710938 C 97.040955 48.586005 98.134536 49.023438 99.417969 49.023438 C 100.73057 49.023438 101.8399 48.572205 102.74414 47.667969 C 103.67755 46.763732 104.14453 45.670151 104.14453 44.386719 C 104.14453 43.044948 103.67755 41.935614 102.74414 41.060547 C 101.8399 40.15631 100.73057 39.705078 99.417969 39.705078 z M 66.341797 59.349609 C 60.59552 59.349609 55.519742 60.750565 51.115234 63.550781 L 51.115234 70.900391 C 55.461404 67.225107 60.332265 65.388672 65.728516 65.388672 C 71.883158 65.388672 74.960938 69.193553 74.960938 76.806641 L 61.529297 78.689453 C 51.670202 80.060392 46.740234 84.931254 46.740234 93.302734 C 46.740234 97.21137 47.993426 100.34631 50.501953 102.70898 C 53.039649 105.07167 56.541062 106.25391 61.003906 106.25391 C 67.071042 106.25391 71.664082 103.57021 74.785156 98.203125 L 74.960938 98.203125 L 74.960938 105.20312 L 82.136719 105.20312 L 82.136719 76.064453 C 82.136719 64.921925 76.871778 59.349609 66.341797 59.349609 z M 95.744141 60.400391 L 95.744141 105.20312 L 102.91992 105.20312 L 102.91992 60.400391 L 95.744141 60.400391 z M 74.960938 82.539062 L 74.960938 87.001953 C 74.960938 90.823082 73.794451 93.987566 71.460938 96.496094 C 69.156592 98.975451 66.224624 100.21484 62.666016 100.21484 C 60.069982 100.21484 57.985278 99.529141 56.410156 98.158203 C 54.864204 96.758094 54.089844 94.965012 54.089844 92.777344 C 54.089844 89.772945 54.937109 87.688242 56.628906 86.521484 C 58.320704 85.325559 60.82904 84.494047 64.154297 84.027344 L 74.960938 82.539062 z "></path>
+            </svg>
+        </td>
+        <td>
+            <svg id="rollercoaster" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!</textPath></text>
+                </g>
+            </svg>
+        </td>
+        <td>
+            <svg id="gradientOffset" viewBox="-75 -75 150 150">
+                <defs>
+                    <radialGradient id="gradientJS">
+                        <stop class="stop1" offset="0%" />
+                        <stop id="offsetTweak" class="stop2" />
+                        <stop class="stop3" offset="100%" />
+                    </radialGradient>
+                </defs>
+                <text style="fill:url(#gradientJS);" font-size="80" text-anchor="middle" y="20">SVG</text>
+            </svg>
+        </td>
+    </tr>
+    <tr>
+        <td><p>SMIL</p></td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <defs>
+                    <clipPath id="circleClipPathSmil">
+                        <circle r="37.5">
+                            <animate id="inhale"
+                                     attributeName="r"
+                                     attributeType="XML"
+                                     values="37.5; 50; 37.5"
+                                     calcMode="spline"
+                                     keyTimes="0;0.5;1"
+                                     keySplines=".5 0 .5 1; .5 0 .5 1 "
+                                     begin="0s" dur="2s"
+                                     fill="freeze" repeatCount="indefinite" />
+                        </circle>
+                    </clipPath>
+                </defs>
+                <image clip-path="url(#circleClipPathSmil)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75">
+                    <animate attributeName="x"
+                             attributeType="XML"
+                             values="-37.5; -75; -37.5"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+                    <animate attributeName="y"
+                             attributeType="XML"
+                             values="-37.5; -75; -37.5"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+                    <animate attributeName="width"
+                             attributeType="XML"
+                             values="75; 150; 75"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+                    <animate attributeName="height"
+                             attributeType="XML"
+                             values="75; 150; 75"
+                             calcMode="spline"
+                             keyTimes="0;0.5;1"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 "
+                             begin="inhale.begin" dur="2s"
+                             fill="freeze" repeatCount="indefinite"></animate>
+
+                </image>
+            </svg>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
+                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10;">
+                    ??
+                    <animate attributeName="stroke-dashoffset"
+                             attributeType="XML"
+                             begin="0" dur="1s"
+                             from="0" to="30"
+                             repeatCount="indefinite">
+
+                    </animate>
+                </text>
+            </svg>
+        </td>
+        <td>
+            <svg viewBox="0 0 150 150" width="150px" height="150px">
+                <path class="strokedPath" d="M 38.996094 37.910156 C 34.941614 37.910156 31.558413 39.281559 28.845703 42.023438 C 26.132994 44.736147 24.775391 48.440522 24.775391 53.136719 L 24.775391 60.400391 L 17.119141 60.400391 L 17.119141 66.525391 L 24.775391 66.525391 L 24.775391 105.20312 L 31.908203 105.20312 L 31.908203 66.525391 L 42.408203 66.525391 L 42.408203 60.400391 L 31.908203 60.400391 L 31.908203 53.486328 C 31.908203 47.156672 34.416539 43.992188 39.433594 43.992188 C 41.212898 43.992187 42.803017 44.386267 44.203125 45.173828 L 44.203125 38.699219 C 42.919692 38.174178 41.183762 37.910156 38.996094 37.910156 z M 117.44531 38.873047 L 117.44531 105.20312 L 124.62109 105.20312 L 124.62109 38.873047 L 117.44531 38.873047 z M 99.417969 39.705078 C 98.134536 39.705078 97.040955 40.15631 96.136719 41.060547 C 95.232482 41.935614 94.78125 43.044948 94.78125 44.386719 C 94.78125 45.728489 95.232482 46.835869 96.136719 47.710938 C 97.040955 48.586005 98.134536 49.023438 99.417969 49.023438 C 100.73057 49.023438 101.8399 48.572205 102.74414 47.667969 C 103.67755 46.763732 104.14453 45.670151 104.14453 44.386719 C 104.14453 43.044948 103.67755 41.935614 102.74414 41.060547 C 101.8399 40.15631 100.73057 39.705078 99.417969 39.705078 z M 66.341797 59.349609 C 60.59552 59.349609 55.519742 60.750565 51.115234 63.550781 L 51.115234 70.900391 C 55.461404 67.225107 60.332265 65.388672 65.728516 65.388672 C 71.883158 65.388672 74.960938 69.193553 74.960938 76.806641 L 61.529297 78.689453 C 51.670202 80.060392 46.740234 84.931254 46.740234 93.302734 C 46.740234 97.21137 47.993426 100.34631 50.501953 102.70898 C 53.039649 105.07167 56.541062 106.25391 61.003906 106.25391 C 67.071042 106.25391 71.664082 103.57021 74.785156 98.203125 L 74.960938 98.203125 L 74.960938 105.20312 L 82.136719 105.20312 L 82.136719 76.064453 C 82.136719 64.921925 76.871778 59.349609 66.341797 59.349609 z M 95.744141 60.400391 L 95.744141 105.20312 L 102.91992 105.20312 L 102.91992 60.400391 L 95.744141 60.400391 z M 74.960938 82.539062 L 74.960938 87.001953 C 74.960938 90.823082 73.794451 93.987566 71.460938 96.496094 C 69.156592 98.975451 66.224624 100.21484 62.666016 100.21484 C 60.069982 100.21484 57.985278 99.529141 56.410156 98.158203 C 54.864204 96.758094 54.089844 94.965012 54.089844 92.777344 C 54.089844 89.772945 54.937109 87.688242 56.628906 86.521484 C 58.320704 85.325559 60.82904 84.494047 64.154297 84.027344 L 74.960938 82.539062 z ">
+                    <animate attributeName="d"
+                             attributeType="XML"
+                             values="
+m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 C 75.508903,133.07994 88.388348,113.38197 85.35789,102.27029 82.327433,91.158614 73.993674,79.54186 58.33631,72.72333 42.678945,65.904801 28.536809,52.267741 32.57742,39.893372 36.61803,27.519004 52.022856,15.902249 65.659916,15.144635 79.296975,14.387021 86.873119,22.215703 94.449263,33.327381;
+
+m 17.080679,16.742011 c 18.856783,0.891956 34.207063,35.97853 39.814368,53.758706 8.078142,25.614937 11.141415,66.769573 11.141415,66.769573 5.309326,0.7814 19.011642,-31.36934 26.72842,-57.939817 6.609318,-22.757266 11.892728,-51.285371 3.883966,-53.722815 -12.453365,-3.790145 -2.832953,13.215622 10.761062,14.536978 5.06563,0.492385 13.53464,-1.500362 32.71792,-18.424398;
+
+M 113.68782,23.527725 C 109.50889,10.848253 86.220422,3.8916674 69.573618,11.929288 48.599015,22.056513 35.652941,39.606759 32.85789,59.948861 c -2.422392,17.629934 -1.7162,69.476099 24.942706,76.881609 6.78789,1.88559 34.472586,-1.56826 42.812534,-17.29424 11.24054,-21.195372 12.71777,-42.521782 9.86821,-46.713023 -2.77927,-4.087854 -52.179647,-7.393219 -37.10351,18.539888;
+
+m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 C 75.508903,133.07994 88.388348,113.38197 85.35789,102.27029 82.327433,91.158614 73.993674,79.54186 58.33631,72.72333 42.678945,65.904801 28.536809,52.267741 32.57742,39.893372 36.61803,27.519004 52.022856,15.902249 65.659916,15.144635 79.296975,14.387021 86.873119,22.215703 94.449263,33.327381
+
+"
+                             keyTimes="0;.33;.67;1"
+                             repeatCount="indefinite"
+                             calcMode="spline"
+                             keySplines=".5 0 .5 1; .5 0 .5 1 ; .5 0 .5 1 "
+                             begin="0s"
+                             dur="3s"
+                             fill="freeze" />
+                </path>
+            </svg>
+        </td>
+        <td>
+            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                <g transform="translate(0 -902.36)">
+                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
+                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!<animate attributeName="startOffset" attributeType="XML" values="30%;70%;30%" calcMode="spline" keyTimes="0;0.5;1" keySplines=".5 0 .5 1; .5 0 .5 1 " begin="0s" dur="2s" repeatCount="indefinite" fill="freeze">
+
+                    </animate></textPath></text>
+                </g>
+            </svg>
+        </td>
+        <td>
+            <svg viewBox="-75 -75 150 150">
+                <defs>
+                    <radialGradient id="gradient">
+                        <stop class="stop1" offset="0%" />
+                        <stop class="stop2">
+                            <animate attributeName="offset"
+                                     attributeType="XML"
+                                     values="10%;90%;10%"
+                                     calcMode="spline" keyTimes="0;0.5;1" keySplines=".5 0 .5 1; .5 0 .5 1"
+                                     begin="0s" dur="1s" repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop class="stop3" offset="100%" />
+                    </radialGradient>
+                </defs>
+                <text style="fill:url(#gradient);" font-size="80" text-anchor="middle" y="20">SVG</text>
+            </svg>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table>
+    <caption>
+        3. Miscellaneous
+    </caption>
+    <thead>
+    <tr>
+        <th></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><p>1</p></td>
 
         <td>
             <svg viewBox="-75 -75 150 150" width="150px" height="150px">
@@ -472,52 +802,28 @@
                 Combination
             </p>
         </td>
-
-        <td class="smil">
-            <svg viewBox="0 0 150 150" width="150px" height="150px">
-                <defs>
-                    <clipPath id="concentric">
-                        <path fill="black">
-                            <animate attributeName="d"
-                                     attributeType="XML"
-                                     values="M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40.740698 16.375399 33.487875 21.305093 27.396484 27.396484 C 21.305093 33.487875 16.3754 40.740697 12.96875 48.794922 C 9.5621003 56.849146 7.677735 65.704851 7.6777344 75 C 7.6777338 84.29515 9.5621005 93.15085 12.96875 101.20508 C 16.375399 109.2593 21.305093 116.51213 27.396484 122.60352 C 33.487876 128.69491 40.740697 133.6246 48.794922 137.03125 C 56.849146 140.4379 65.70485 142.32227 75 142.32227 C 84.29515 142.32227 93.150851 140.4379 101.20508 137.03125 C 109.2593 133.6246 116.51213 128.69491 122.60352 122.60352 C 128.69491 116.51213 133.6246 109.2593 137.03125 101.20508 C 140.4379 93.150851 142.32227 84.29515 142.32227 75 C 142.32227 65.70485 140.4379 56.849146 137.03125 48.794922 C 133.6246 40.740698 128.69491 33.487875 122.60352 27.396484 C 116.51213 21.305094 109.2593 16.375399 101.20508 12.96875 C 93.15085 9.5621004 84.29515 7.6777345 75 7.6777344 z M 75 21.460938 C 89.784135 21.460938 103.16893 27.45409 112.85742 37.142578 C 122.5459 46.831066 128.53906 60.215865 128.53906 75 C 128.53906 89.784136 122.54591 103.16893 112.85742 112.85742 C 103.16893 122.54591 89.784136 128.53906 75 128.53906 C 60.215865 128.53906 46.831066 122.5459 37.142578 112.85742 C 27.45409 103.16893 21.460937 89.784135 21.460938 75 C 21.460939 60.215866 27.45409 46.831066 37.142578 37.142578 C 46.831066 27.45409 60.215866 21.460938 75 21.460938 z M 75 37.876953 C 64.748737 37.876953 55.467961 42.032038 48.75 48.75 C 42.032039 55.467961 37.876954 64.748737 37.876953 75 C 37.876952 85.251264 42.032039 94.532041 48.75 101.25 C 55.467961 107.96796 64.748736 112.12305 75 112.12305 C 85.251264 112.12305 94.532042 107.96797 101.25 101.25 C 107.96797 94.532042 112.12305 85.251264 112.12305 75 C 112.12305 64.748736 107.96796 55.467961 101.25 48.75 C 94.532041 42.032039 85.251264 37.876953 75 37.876953 z
-;
-m 30.048215,100.10669 c -2.809738,0 -5.486641,0.56961 -7.921271,1.59937 -2.434631,1.02976 -4.627015,2.51991 -6.468321,4.36122 -1.841305,1.8413 -3.331453,4.03369 -4.361215,6.46832 -1.029762,2.43463 -1.599368,5.11153 -1.5993683,7.92127 0,2.80974 0.5696063,5.48664 1.5993683,7.92127 1.029762,2.43463 2.51991,4.62702 4.361215,6.46832 1.841306,1.84131 4.033689,3.33145 6.468321,4.36122 2.43463,1.02976 5.111533,1.59936 7.921271,1.59936 2.809738,0 5.486639,-0.5696 7.921271,-1.59936 2.43463,-1.02977 4.627016,-2.51991 6.468321,-4.36122 1.841306,-1.8413 3.331453,-4.03369 4.361215,-6.46832 1.029763,-2.43463 1.59937,-5.11153 1.59937,-7.92127 0,-2.80974 -0.569607,-5.48664 -1.59937,-7.92127 -1.029762,-2.43463 -2.519909,-4.62702 -4.361215,-6.46832 -1.841305,-1.84131 -4.033691,-3.33146 -6.468321,-4.36122 -2.434632,-1.02976 -5.111533,-1.59937 -7.921271,-1.59937 z M 119.69925,78.534557 c 6.41591,0 12.22454,2.600864 16.42908,6.805402 4.20454,4.204538 6.8054,10.013174 6.8054,16.429081 0,6.41591 -2.60086,12.22455 -6.8054,16.42908 -4.20454,4.20454 -10.01317,6.80541 -16.42908,6.80541 -6.41591,0 -12.22455,-2.60087 -16.42908,-6.80541 -4.204542,-4.20453 -6.805406,-10.01317 -6.805405,-16.42908 0,-6.415907 2.600863,-12.224543 6.805405,-16.429081 4.20453,-4.204538 10.01317,-6.805402 16.42908,-6.805402 z M 49.367379,1.2589232 c -13.424278,0 -25.57768,5.4411847 -34.375013,14.2385188 C 6.195033,24.294775 0.75384823,36.448177 0.75384692,49.872455 0.75384561,63.296734 6.195033,75.450137 14.992366,84.247468 c 8.797333,8.797331 20.950733,14.238523 34.375013,14.238523 13.424279,0 25.577683,-5.441179 34.375012,-14.238523 8.797345,-8.79733 14.238523,-20.950734 14.238523,-34.375013 0,-13.424279 -5.441191,-25.57768 -14.238523,-34.375013 C 74.945061,6.7001092 62.791658,1.2589232 49.367379,1.2589232 Z
-;
-M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40.740698 16.375399 33.487875 21.305093 27.396484 27.396484 C 21.305093 33.487875 16.3754 40.740697 12.96875 48.794922 C 9.5621003 56.849146 7.677735 65.704851 7.6777344 75 C 7.6777338 84.29515 9.5621005 93.15085 12.96875 101.20508 C 16.375399 109.2593 21.305093 116.51213 27.396484 122.60352 C 33.487876 128.69491 40.740697 133.6246 48.794922 137.03125 C 56.849146 140.4379 65.70485 142.32227 75 142.32227 C 84.29515 142.32227 93.150851 140.4379 101.20508 137.03125 C 109.2593 133.6246 116.51213 128.69491 122.60352 122.60352 C 128.69491 116.51213 133.6246 109.2593 137.03125 101.20508 C 140.4379 93.150851 142.32227 84.29515 142.32227 75 C 142.32227 65.70485 140.4379 56.849146 137.03125 48.794922 C 133.6246 40.740698 128.69491 33.487875 122.60352 27.396484 C 116.51213 21.305094 109.2593 16.375399 101.20508 12.96875 C 93.15085 9.5621004 84.29515 7.6777345 75 7.6777344 z M 75 21.460938 C 89.784135 21.460938 103.16893 27.45409 112.85742 37.142578 C 122.5459 46.831066 128.53906 60.215865 128.53906 75 C 128.53906 89.784136 122.54591 103.16893 112.85742 112.85742 C 103.16893 122.54591 89.784136 128.53906 75 128.53906 C 60.215865 128.53906 46.831066 122.5459 37.142578 112.85742 C 27.45409 103.16893 21.460937 89.784135 21.460938 75 C 21.460939 60.215866 27.45409 46.831066 37.142578 37.142578 C 46.831066 27.45409 60.215866 21.460938 75 21.460938 z M 75 37.876953 C 64.748737 37.876953 55.467961 42.032038 48.75 48.75 C 42.032039 55.467961 37.876954 64.748737 37.876953 75 C 37.876952 85.251264 42.032039 94.532041 48.75 101.25 C 55.467961 107.96796 64.748736 112.12305 75 112.12305 C 85.251264 112.12305 94.532042 107.96797 101.25 101.25 C 107.96797 94.532042 112.12305 85.251264 112.12305 75 C 112.12305 64.748736 107.96796 55.467961 101.25 48.75 C 94.532041 42.032039 85.251264 37.876953 75 37.876953 z
-"
-                                     keyTimes="0;.5;1"
-                                     calcMode="spline"
-                                     keyTimes="0;0.5;1"
-                                     keySplines=".5 0 .5 1; .5 0 .5 1 "
-                                     repeatCount="indefinite"
-                                     begin="0s"
-                                     dur="3s"
-                                     fill="freeze" />
-
-                        </path>
-                    </clipPath>
-                </defs>
-                <image xlink:href="billiard.png" width="150" height="150" x="0" y="0" clip-path="url(#concentric)"></image>
-
+        <td>
+            <svg width="150px" height="150px" viewBox="-10 -10 20 20">
+                <circle class="csscircle" r="10" cy="-5"></circle>
+                <text class="cssfont" font-size="5" text-anchor="middle" y=8>10px</text>
             </svg>
             <p>
-                Multi-segment path
+                Viewbox width: 20
             </p>
         </td>
-        <td class="smil">
-            <div style="clip-path: url(#concentric); height: 150px; background-color: #08495a; color: white; font-family: monospace;">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis corporis culpa dolorum exercitationem ipsa iusto labore minus non odio possimus provident quas quidem, reprehenderit similique soluta tenetur ullam, vitae?
-                </p>
-            </div>
-            <p>
-                Clipping a &lt;div&gt;
-            </p>
-        </td>
+        <td>
+            <svg width="150px" height="150px" viewBox="-30 -30 60 60">
+                <circle class="csscircle" r="10" cy="-5"></circle>
+                <text class="cssfont" font-size="5" text-anchor="middle" y="8">10px</text>
+            </svg>
 
+            <p>
+                Viewbox width: 60
+            </p>
+        </td>
     </tr>
     <tr>
+        <td><p>2</p></td>
         <td>
             <svg viewBox="-75 -75 150 150" width="150px" height="150px">
                 <text text-anchor="middle" x="0" y="40" style="font-size: 70">
@@ -586,6 +892,7 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
         </td>
     </tr>
     <tr>
+        <td><p>3</p></td>
         <td class="js">
             <svg id="polyline" viewBox="0 0 150 150" width="150px" height="150px">
                 <polyline style="stroke: black; stroke-width: 2px; fill: none;" points="25,25 50,150 75,10"></polyline>
@@ -639,264 +946,47 @@ M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40
         </td>
     </tr>
     <tr>
-        <td class="css">
-            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-                <defs>
-                    <clipPath id="circleClipPath">
-                        <circle style="animation: increaseRadius; animation-timing-function: ease-in-out; animation-duration: 1s; animation-direction: alternate; animation-iteration-count: infinite;" r="37.5"></circle>
-                    </clipPath>
-                </defs>
-                <image style="animation: increaseImageSize; animation-timing-function: ease-in-out; animation-duration: 1s; animation-direction: alternate; animation-iteration-count: infinite;" clip-path="url(#circleClipPath)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75"></image>
-            </svg>
-            <p>
-                Embedded raster graphics
-            </p>
-        </td>
-        <td class="css">
-        <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-            <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10; animation: rollingAnts; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: linear;">
-                ??
-            </text>
-        </svg>
-        <p>
-            Dash animation
-        </p>
-    </td>
-    <td class="css">
-        <svg viewBox="0 0 150 150" width="150px" height="150px">
-            <path class="strokedPath"style="animation: morph; animation-duration: 3s; animation-iteration-count: infinite;" d="M 38.996094 37.910156 C 34.941614 37.910156 31.558413 39.281559 28.845703 42.023438 C 26.132994 44.736147 24.775391 48.440522 24.775391 53.136719 L 24.775391 60.400391 L 17.119141 60.400391 L 17.119141 66.525391 L 24.775391 66.525391 L 24.775391 105.20312 L 31.908203 105.20312 L 31.908203 66.525391 L 42.408203 66.525391 L 42.408203 60.400391 L 31.908203 60.400391 L 31.908203 53.486328 C 31.908203 47.156672 34.416539 43.992188 39.433594 43.992188 C 41.212898 43.992187 42.803017 44.386267 44.203125 45.173828 L 44.203125 38.699219 C 42.919692 38.174178 41.183762 37.910156 38.996094 37.910156 z M 117.44531 38.873047 L 117.44531 105.20312 L 124.62109 105.20312 L 124.62109 38.873047 L 117.44531 38.873047 z M 99.417969 39.705078 C 98.134536 39.705078 97.040955 40.15631 96.136719 41.060547 C 95.232482 41.935614 94.78125 43.044948 94.78125 44.386719 C 94.78125 45.728489 95.232482 46.835869 96.136719 47.710938 C 97.040955 48.586005 98.134536 49.023438 99.417969 49.023438 C 100.73057 49.023438 101.8399 48.572205 102.74414 47.667969 C 103.67755 46.763732 104.14453 45.670151 104.14453 44.386719 C 104.14453 43.044948 103.67755 41.935614 102.74414 41.060547 C 101.8399 40.15631 100.73057 39.705078 99.417969 39.705078 z M 66.341797 59.349609 C 60.59552 59.349609 55.519742 60.750565 51.115234 63.550781 L 51.115234 70.900391 C 55.461404 67.225107 60.332265 65.388672 65.728516 65.388672 C 71.883158 65.388672 74.960938 69.193553 74.960938 76.806641 L 61.529297 78.689453 C 51.670202 80.060392 46.740234 84.931254 46.740234 93.302734 C 46.740234 97.21137 47.993426 100.34631 50.501953 102.70898 C 53.039649 105.07167 56.541062 106.25391 61.003906 106.25391 C 67.071042 106.25391 71.664082 103.57021 74.785156 98.203125 L 74.960938 98.203125 L 74.960938 105.20312 L 82.136719 105.20312 L 82.136719 76.064453 C 82.136719 64.921925 76.871778 59.349609 66.341797 59.349609 z M 95.744141 60.400391 L 95.744141 105.20312 L 102.91992 105.20312 L 102.91992 60.400391 L 95.744141 60.400391 z M 74.960938 82.539062 L 74.960938 87.001953 C 74.960938 90.823082 73.794451 93.987566 71.460938 96.496094 C 69.156592 98.975451 66.224624 100.21484 62.666016 100.21484 C 60.069982 100.21484 57.985278 99.529141 56.410156 98.158203 C 54.864204 96.758094 54.089844 94.965012 54.089844 92.777344 C 54.089844 89.772945 54.937109 87.688242 56.628906 86.521484 C 58.320704 85.325559 60.82904 84.494047 64.154297 84.027344 L 74.960938 82.539062 z "></path>
-        </svg>
-        <p>
-            Path morphing
-        </p>
-    </td>
-        <td class="css">
-            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
-                <g transform="translate(0 -902.36)">
-                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
-                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath style="animation: rollercoaster;" xlink:href="#a" startOffset="50%" class="animate">Text along a path! How exciting!</textPath></text>
-                </g>
-            </svg>
-
-            <p>
-                Text offset animation on path
-            </p>
-        </td>
-        <td class="css">
-            <svg viewBox="-75 -75 150 150">
-                <defs>
-                    <radialGradient id="gradientCSS">
-                        <stop class="stop1" offset="0%" />
-                        <stop style="animation: gradientwave;" class="stop2 animate" />
-                        <stop class="stop3" offset="100%" />
-                    </radialGradient>
-                </defs>
-                <text style="fill:url(#gradientCSS);" font-size="80" text-anchor="middle" y="20">SVG</text>
-            </svg>
-            <p>
-                Gradient offset animation
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td class="js">
-            <svg id="beating" viewBox="-75 -75 150 150" width="150px" height="150px">
-                <defs>
-                    <clipPath id="circleClipPathJS">
-                        <circle r="37.5"></circle>
-                    </clipPath>
-                </defs>
-                <image clip-path="url(#circleClipPathJS)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75"></image>
-            </svg>
-            <p>
-                Embedded raster graphics
-            </p>
-        </td>
-        <td class="js">
-            <svg id="ants" viewBox="-75 -75 150 150" width="150px" height="150px">
-                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10;">
-                    ??
-                </text>
-            </svg>
-
-            <p>
-                Dash animation
-            </p>
-        </td>
-        <td class="js">
-            <svg id="jsMorph" viewBox="0 0 150 150" width="150px" height="150px">
-                <path style="stroke: black; stroke-width: 2px; fill: none;" d="M 38.996094 37.910156 C 34.941614 37.910156 31.558413 39.281559 28.845703 42.023438 C 26.132994 44.736147 24.775391 48.440522 24.775391 53.136719 L 24.775391 60.400391 L 17.119141 60.400391 L 17.119141 66.525391 L 24.775391 66.525391 L 24.775391 105.20312 L 31.908203 105.20312 L 31.908203 66.525391 L 42.408203 66.525391 L 42.408203 60.400391 L 31.908203 60.400391 L 31.908203 53.486328 C 31.908203 47.156672 34.416539 43.992188 39.433594 43.992188 C 41.212898 43.992187 42.803017 44.386267 44.203125 45.173828 L 44.203125 38.699219 C 42.919692 38.174178 41.183762 37.910156 38.996094 37.910156 z M 117.44531 38.873047 L 117.44531 105.20312 L 124.62109 105.20312 L 124.62109 38.873047 L 117.44531 38.873047 z M 99.417969 39.705078 C 98.134536 39.705078 97.040955 40.15631 96.136719 41.060547 C 95.232482 41.935614 94.78125 43.044948 94.78125 44.386719 C 94.78125 45.728489 95.232482 46.835869 96.136719 47.710938 C 97.040955 48.586005 98.134536 49.023438 99.417969 49.023438 C 100.73057 49.023438 101.8399 48.572205 102.74414 47.667969 C 103.67755 46.763732 104.14453 45.670151 104.14453 44.386719 C 104.14453 43.044948 103.67755 41.935614 102.74414 41.060547 C 101.8399 40.15631 100.73057 39.705078 99.417969 39.705078 z M 66.341797 59.349609 C 60.59552 59.349609 55.519742 60.750565 51.115234 63.550781 L 51.115234 70.900391 C 55.461404 67.225107 60.332265 65.388672 65.728516 65.388672 C 71.883158 65.388672 74.960938 69.193553 74.960938 76.806641 L 61.529297 78.689453 C 51.670202 80.060392 46.740234 84.931254 46.740234 93.302734 C 46.740234 97.21137 47.993426 100.34631 50.501953 102.70898 C 53.039649 105.07167 56.541062 106.25391 61.003906 106.25391 C 67.071042 106.25391 71.664082 103.57021 74.785156 98.203125 L 74.960938 98.203125 L 74.960938 105.20312 L 82.136719 105.20312 L 82.136719 76.064453 C 82.136719 64.921925 76.871778 59.349609 66.341797 59.349609 z M 95.744141 60.400391 L 95.744141 105.20312 L 102.91992 105.20312 L 102.91992 60.400391 L 95.744141 60.400391 z M 74.960938 82.539062 L 74.960938 87.001953 C 74.960938 90.823082 73.794451 93.987566 71.460938 96.496094 C 69.156592 98.975451 66.224624 100.21484 62.666016 100.21484 C 60.069982 100.21484 57.985278 99.529141 56.410156 98.158203 C 54.864204 96.758094 54.089844 94.965012 54.089844 92.777344 C 54.089844 89.772945 54.937109 87.688242 56.628906 86.521484 C 58.320704 85.325559 60.82904 84.494047 64.154297 84.027344 L 74.960938 82.539062 z "></path>
-            </svg>
-            <p>
-                Path morphing
-            </p>
-        </td>
-        <td class="js">
-            <svg id="rollercoaster" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
-                <g transform="translate(0 -902.36)">
-                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
-                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!</textPath></text>
-                </g>
-            </svg>
-
-            <p>
-                Text offset animation on path
-            </p>
-        </td>
-        <td class="js">
-            <svg id="gradientOffset" viewBox="-75 -75 150 150">
-                <defs>
-                    <radialGradient id="gradientJS">
-                        <stop class="stop1" offset="0%" />
-                        <stop id="offsetTweak" class="stop2" />
-                        <stop class="stop3" offset="100%" />
-                    </radialGradient>
-                </defs>
-                <text style="fill:url(#gradientJS);" font-size="80" text-anchor="middle" y="20">SVG</text>
-            </svg>
-            <p>
-                Gradient offset animation
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td class="smil">
-            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-                <defs>
-                    <clipPath id="circleClipPathSmil">
-                        <circle r="37.5">
-                            <animate id="inhale"
-                                 attributeName="r"
-                                 attributeType="XML"
-                                 values="37.5; 50; 37.5"
-                                 calcMode="spline"
-                                 keyTimes="0;0.5;1"
-                                 keySplines=".5 0 .5 1; .5 0 .5 1 "
-                                 begin="0s" dur="2s"
-                                 fill="freeze" repeatCount="indefinite" />
-                        </circle>
-                    </clipPath>
-                </defs>
-                <image clip-path="url(#circleClipPathSmil)" xlink:href="billiard.png" x="-37.5" y="-37.5" width="75" height="75">
-                    <animate attributeName="x"
-                             attributeType="XML"
-                             values="-37.5; -75; -37.5"
-                             calcMode="spline"
-                             keyTimes="0;0.5;1"
-                             keySplines=".5 0 .5 1; .5 0 .5 1 "
-                             begin="inhale.begin" dur="2s"
-                             fill="freeze" repeatCount="indefinite"></animate>
-                    <animate attributeName="y"
-                             attributeType="XML"
-                             values="-37.5; -75; -37.5"
-                             calcMode="spline"
-                             keyTimes="0;0.5;1"
-                             keySplines=".5 0 .5 1; .5 0 .5 1 "
-                             begin="inhale.begin" dur="2s"
-                             fill="freeze" repeatCount="indefinite"></animate>
-                    <animate attributeName="width"
-                             attributeType="XML"
-                             values="75; 150; 75"
-                             calcMode="spline"
-                             keyTimes="0;0.5;1"
-                             keySplines=".5 0 .5 1; .5 0 .5 1 "
-                             begin="inhale.begin" dur="2s"
-                             fill="freeze" repeatCount="indefinite"></animate>
-                    <animate attributeName="height"
-                             attributeType="XML"
-                             values="75; 150; 75"
-                             calcMode="spline"
-                             keyTimes="0;0.5;1"
-                             keySplines=".5 0 .5 1; .5 0 .5 1 "
-                             begin="inhale.begin" dur="2s"
-                             fill="freeze" repeatCount="indefinite"></animate>
-
-                </image>
-            </svg>
-            <p>
-                Embedded raster graphics
-            </p>
-        </td>
-        <td class="smil">
-            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-                <text class="dynamic" text-anchor="middle" x="0" y="40" font-size="120" style="stroke-dasharray: 5 5 10 10;">
-                    ??
-                    <animate attributeName="stroke-dashoffset"
-                        attributeType="XML"
-                        begin="0" dur="1s"
-                        from="0" to="30"
-                        repeatCount="indefinite">
-
-                    </animate>
-                </text>
-            </svg>
-
-            <p>
-                Dash animation<br />(JS changes text)
-            </p>
-        </td>
+        <td><p>4</p></td>
         <td class="smil">
             <svg viewBox="0 0 150 150" width="150px" height="150px">
-                <path class="strokedPath">
-                    <animate attributeName="d"
-                             attributeType="XML"
-                             values="
-m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 C 75.508903,133.07994 88.388348,113.38197 85.35789,102.27029 82.327433,91.158614 73.993674,79.54186 58.33631,72.72333 42.678945,65.904801 28.536809,52.267741 32.57742,39.893372 36.61803,27.519004 52.022856,15.902249 65.659916,15.144635 79.296975,14.387021 86.873119,22.215703 94.449263,33.327381;
-
-m 17.080679,16.742011 c 18.856783,0.891956 34.207063,35.97853 39.814368,53.758706 8.078142,25.614937 11.141415,66.769573 11.141415,66.769573 5.309326,0.7814 19.011642,-31.36934 26.72842,-57.939817 6.609318,-22.757266 11.892728,-51.285371 3.883966,-53.722815 -12.453365,-3.790145 -2.832953,13.215622 10.761062,14.536978 5.06563,0.492385 13.53464,-1.500362 32.71792,-18.424398;
-
-M 113.68782,23.527725 C 109.50889,10.848253 86.220422,3.8916674 69.573618,11.929288 48.599015,22.056513 35.652941,39.606759 32.85789,59.948861 c -2.422392,17.629934 -1.7162,69.476099 24.942706,76.881609 6.78789,1.88559 34.472586,-1.56826 42.812534,-17.29424 11.24054,-21.195372 12.71777,-42.521782 9.86821,-46.713023 -2.77927,-4.087854 -52.179647,-7.393219 -37.10351,18.539888;
-
-m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 C 75.508903,133.07994 88.388348,113.38197 85.35789,102.27029 82.327433,91.158614 73.993674,79.54186 58.33631,72.72333 42.678945,65.904801 28.536809,52.267741 32.57742,39.893372 36.61803,27.519004 52.022856,15.902249 65.659916,15.144635 79.296975,14.387021 86.873119,22.215703 94.449263,33.327381
-
-"
-                             keyTimes="0;.33;.67;1"
-                             repeatCount="indefinite"
-                             calcMode="spline"
-                             keySplines=".5 0 .5 1; .5 0 .5 1 ; .5 0 .5 1 "
-                             begin="0s"
-                             dur="3s"
-                             fill="freeze" />
-                </path>
-            </svg>
-
-            <p>
-                Path morphing
-            </p>
-        </td>
-        <td class="smil">
-            <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
-                <g transform="translate(0 -902.36)">
-                    <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
-                    <text style="text-decoration: underline; text-anchor:middle;text-align:center; stroke: none; fill: #00698D;" line-height="125%" font-family="sans-serif" fill="#000000"><textPath xlink:href="#a" startOffset="50%">Text along a path! How exciting!<animate attributeName="startOffset" attributeType="XML" values="30%;70%;30%" calcMode="spline" keyTimes="0;0.5;1" keySplines=".5 0 .5 1; .5 0 .5 1 " begin="0s" dur="2s" repeatCount="indefinite" fill="freeze">
-
-                    </animate></textPath></text>
-                </g>
-            </svg>
-
-            <p>
-                Text offset animation on path
-            </p>
-        </td>
-        <td class="smil">
-            <svg viewBox="-75 -75 150 150">
                 <defs>
-                    <radialGradient id="gradient">
-                        <stop class="stop1" offset="0%" />
-                        <stop class="stop2">
-                            <animate attributeName="offset"
+                    <clipPath id="concentric">
+                        <path fill="black">
+                            <animate attributeName="d"
                                      attributeType="XML"
-                                     values="10%;90%;10%"
-                                     calcMode="spline" keyTimes="0;0.5;1" keySplines=".5 0 .5 1; .5 0 .5 1"
-                                     begin="0s" dur="1s" repeatCount="indefinite"></animate>
-                        </stop>
-                        <stop class="stop3" offset="100%" />
-                    </radialGradient>
+                                     values="M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40.740698 16.375399 33.487875 21.305093 27.396484 27.396484 C 21.305093 33.487875 16.3754 40.740697 12.96875 48.794922 C 9.5621003 56.849146 7.677735 65.704851 7.6777344 75 C 7.6777338 84.29515 9.5621005 93.15085 12.96875 101.20508 C 16.375399 109.2593 21.305093 116.51213 27.396484 122.60352 C 33.487876 128.69491 40.740697 133.6246 48.794922 137.03125 C 56.849146 140.4379 65.70485 142.32227 75 142.32227 C 84.29515 142.32227 93.150851 140.4379 101.20508 137.03125 C 109.2593 133.6246 116.51213 128.69491 122.60352 122.60352 C 128.69491 116.51213 133.6246 109.2593 137.03125 101.20508 C 140.4379 93.150851 142.32227 84.29515 142.32227 75 C 142.32227 65.70485 140.4379 56.849146 137.03125 48.794922 C 133.6246 40.740698 128.69491 33.487875 122.60352 27.396484 C 116.51213 21.305094 109.2593 16.375399 101.20508 12.96875 C 93.15085 9.5621004 84.29515 7.6777345 75 7.6777344 z M 75 21.460938 C 89.784135 21.460938 103.16893 27.45409 112.85742 37.142578 C 122.5459 46.831066 128.53906 60.215865 128.53906 75 C 128.53906 89.784136 122.54591 103.16893 112.85742 112.85742 C 103.16893 122.54591 89.784136 128.53906 75 128.53906 C 60.215865 128.53906 46.831066 122.5459 37.142578 112.85742 C 27.45409 103.16893 21.460937 89.784135 21.460938 75 C 21.460939 60.215866 27.45409 46.831066 37.142578 37.142578 C 46.831066 27.45409 60.215866 21.460938 75 21.460938 z M 75 37.876953 C 64.748737 37.876953 55.467961 42.032038 48.75 48.75 C 42.032039 55.467961 37.876954 64.748737 37.876953 75 C 37.876952 85.251264 42.032039 94.532041 48.75 101.25 C 55.467961 107.96796 64.748736 112.12305 75 112.12305 C 85.251264 112.12305 94.532042 107.96797 101.25 101.25 C 107.96797 94.532042 112.12305 85.251264 112.12305 75 C 112.12305 64.748736 107.96796 55.467961 101.25 48.75 C 94.532041 42.032039 85.251264 37.876953 75 37.876953 z
+;
+m 30.048215,100.10669 c -2.809738,0 -5.486641,0.56961 -7.921271,1.59937 -2.434631,1.02976 -4.627015,2.51991 -6.468321,4.36122 -1.841305,1.8413 -3.331453,4.03369 -4.361215,6.46832 -1.029762,2.43463 -1.599368,5.11153 -1.5993683,7.92127 0,2.80974 0.5696063,5.48664 1.5993683,7.92127 1.029762,2.43463 2.51991,4.62702 4.361215,6.46832 1.841306,1.84131 4.033689,3.33145 6.468321,4.36122 2.43463,1.02976 5.111533,1.59936 7.921271,1.59936 2.809738,0 5.486639,-0.5696 7.921271,-1.59936 2.43463,-1.02977 4.627016,-2.51991 6.468321,-4.36122 1.841306,-1.8413 3.331453,-4.03369 4.361215,-6.46832 1.029763,-2.43463 1.59937,-5.11153 1.59937,-7.92127 0,-2.80974 -0.569607,-5.48664 -1.59937,-7.92127 -1.029762,-2.43463 -2.519909,-4.62702 -4.361215,-6.46832 -1.841305,-1.84131 -4.033691,-3.33146 -6.468321,-4.36122 -2.434632,-1.02976 -5.111533,-1.59937 -7.921271,-1.59937 z M 119.69925,78.534557 c 6.41591,0 12.22454,2.600864 16.42908,6.805402 4.20454,4.204538 6.8054,10.013174 6.8054,16.429081 0,6.41591 -2.60086,12.22455 -6.8054,16.42908 -4.20454,4.20454 -10.01317,6.80541 -16.42908,6.80541 -6.41591,0 -12.22455,-2.60087 -16.42908,-6.80541 -4.204542,-4.20453 -6.805406,-10.01317 -6.805405,-16.42908 0,-6.415907 2.600863,-12.224543 6.805405,-16.429081 4.20453,-4.204538 10.01317,-6.805402 16.42908,-6.805402 z M 49.367379,1.2589232 c -13.424278,0 -25.57768,5.4411847 -34.375013,14.2385188 C 6.195033,24.294775 0.75384823,36.448177 0.75384692,49.872455 0.75384561,63.296734 6.195033,75.450137 14.992366,84.247468 c 8.797333,8.797331 20.950733,14.238523 34.375013,14.238523 13.424279,0 25.577683,-5.441179 34.375012,-14.238523 8.797345,-8.79733 14.238523,-20.950734 14.238523,-34.375013 0,-13.424279 -5.441191,-25.57768 -14.238523,-34.375013 C 74.945061,6.7001092 62.791658,1.2589232 49.367379,1.2589232 Z
+;
+M 75 7.6777344 C 65.704851 7.6777343 56.849146 9.5621003 48.794922 12.96875 C 40.740698 16.375399 33.487875 21.305093 27.396484 27.396484 C 21.305093 33.487875 16.3754 40.740697 12.96875 48.794922 C 9.5621003 56.849146 7.677735 65.704851 7.6777344 75 C 7.6777338 84.29515 9.5621005 93.15085 12.96875 101.20508 C 16.375399 109.2593 21.305093 116.51213 27.396484 122.60352 C 33.487876 128.69491 40.740697 133.6246 48.794922 137.03125 C 56.849146 140.4379 65.70485 142.32227 75 142.32227 C 84.29515 142.32227 93.150851 140.4379 101.20508 137.03125 C 109.2593 133.6246 116.51213 128.69491 122.60352 122.60352 C 128.69491 116.51213 133.6246 109.2593 137.03125 101.20508 C 140.4379 93.150851 142.32227 84.29515 142.32227 75 C 142.32227 65.70485 140.4379 56.849146 137.03125 48.794922 C 133.6246 40.740698 128.69491 33.487875 122.60352 27.396484 C 116.51213 21.305094 109.2593 16.375399 101.20508 12.96875 C 93.15085 9.5621004 84.29515 7.6777345 75 7.6777344 z M 75 21.460938 C 89.784135 21.460938 103.16893 27.45409 112.85742 37.142578 C 122.5459 46.831066 128.53906 60.215865 128.53906 75 C 128.53906 89.784136 122.54591 103.16893 112.85742 112.85742 C 103.16893 122.54591 89.784136 128.53906 75 128.53906 C 60.215865 128.53906 46.831066 122.5459 37.142578 112.85742 C 27.45409 103.16893 21.460937 89.784135 21.460938 75 C 21.460939 60.215866 27.45409 46.831066 37.142578 37.142578 C 46.831066 27.45409 60.215866 21.460938 75 21.460938 z M 75 37.876953 C 64.748737 37.876953 55.467961 42.032038 48.75 48.75 C 42.032039 55.467961 37.876954 64.748737 37.876953 75 C 37.876952 85.251264 42.032039 94.532041 48.75 101.25 C 55.467961 107.96796 64.748736 112.12305 75 112.12305 C 85.251264 112.12305 94.532042 107.96797 101.25 101.25 C 107.96797 94.532042 112.12305 85.251264 112.12305 75 C 112.12305 64.748736 107.96796 55.467961 101.25 48.75 C 94.532041 42.032039 85.251264 37.876953 75 37.876953 z
+"
+                                     keyTimes="0;.5;1"
+                                     calcMode="spline"
+                                     keyTimes="0;0.5;1"
+                                     keySplines=".5 0 .5 1; .5 0 .5 1 "
+                                     repeatCount="indefinite"
+                                     begin="0s"
+                                     dur="3s"
+                                     fill="freeze" />
+
+                        </path>
+                    </clipPath>
                 </defs>
-                <text style="fill:url(#gradient);" font-size="80" text-anchor="middle" y="20">SVG</text>
+                <image xlink:href="billiard.png" width="150" height="150" x="0" y="0" clip-path="url(#concentric)"></image>
+
             </svg>
             <p>
-                Gradient offset animation
+                Multi-segment path
+            </p>
+        </td>
+        <td class="smil">
+            <div style="clip-path: url(#concentric); height: 150px; background-color: #08495a; color: white; font-family: monospace;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis corporis culpa dolorum exercitationem ipsa iusto labore minus non odio possimus provident quas quidem, reprehenderit similique soluta tenetur ullam, vitae?
+                </p>
+            </div>
+            <p>
+                Clipping a &lt;div&gt;
             </p>
         </td>
     </tr>

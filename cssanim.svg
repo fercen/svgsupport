@@ -1,0 +1,13 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150" width="150" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-75 -75 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <style type="text/css">
+        @keyframes rotate {
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(72deg);
+        }
+        }
+    </style>
+    <path style="fill: green; animation: rotate 1s linear infinite;" d="M 41.671853,41.671853 4.2034562,26.539578 -26.754976,52.509598 -23.9417,12.198905 -58.207338,-9.2191365 -19.00024,-19.000241 -9.2191368,-58.207338 12.198905,-23.9417 52.509598,-26.754977 26.539578,4.2034563 Z"></path>
+</svg>

@@ -161,6 +161,15 @@
             }
         }
 
+        @keyframes spin {
+            from {
+                transform: rotateY(-90deg);
+            }
+            to {
+                transform: rotateY(90deg);
+            }
+        }
+
         .animate {
             animation-duration: 2s;
             animation-iteration-count: infinite;
@@ -901,6 +910,83 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
                 Polyline animation
             </p>
         </td>
+        <td class="js">
+            <svg id="multipath" viewBox="0 0 150 150">
+                <defs>
+                    <path fill="white" id="jsmultipath" d="" />
+                </defs>
+                <rect width="150" height="150" />
+                <use href="#jsmultipath" />
+            </svg>
+            <p>
+                Multi-segment source path
+            </p>
+        </td>
+        <td class="js">
+            <svg viewBox="0 0 150 150" width="150" height="150">
+                <defs>
+                    <mask id="blobmask">
+                        <use href="#jsmultipath" style="filter: url(#blur);" />
+                    </mask>
+
+                </defs>
+
+                <image href="billiard.png" width="150" height="150" mask="url(#blobmask)"></image>
+
+
+            </svg>
+            <p>
+                Filtered path as mask
+            </p>
+        </td>
+        <td class="js">
+            <svg viewBox="0 0 150 150" width="150" height="150">
+                <defs>
+                    <clipPath id="blobclip">
+                        <use href="#jsmultipath"/>
+                    </clipPath>
+
+                </defs>
+
+                <image href="billiard.png" width="150" height="150" clip-path="url(#blobclip)"></image>
+
+
+            </svg>
+            <p>
+                Morphing clip path
+            </p>
+        </td>
+        <td class="css">
+            <svg width="150" height="150">
+                <text font-size="60" x="10" y="50" style="transform: rotateX(-30deg) rotateZ(30deg) scale(1.5);">
+                    CSS
+                </text>
+                <g transform="translate(75)">
+                    <text text-anchor="middle" class="animate" font-size="30" x="0" y="80" style="animation: spin 4s linear infinite;">
+                        Transform
+                    </text>
+                </g>
+
+            </svg>
+            <p style="animation: spin;">
+                CSS transform on SVG elements
+            </p>
+        </td>
+        <td class="css">
+            <img src="cssanim.svg"/>
+            <p>
+                CSS animation inside &lt;img&gt;
+            </p>
+        </td>
+        <td class="js">
+            <img src="jsanim.svg"/>
+            <p>
+                JS animation inside &lt;img&gt;
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td><p>4</p></td>
         <td class="click smil">
             <img src="smilpath.svg" />
             <p>
@@ -944,9 +1030,6 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
                 Begin on click &lt;img&gt;
             </p>
         </td>
-    </tr>
-    <tr>
-        <td><p>4</p></td>
         <td class="smil">
             <svg viewBox="0 0 150 150" width="150px" height="150px">
                 <defs>

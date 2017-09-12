@@ -83,11 +83,7 @@
             to {
                 stroke-dashoffset: 30; } }
 
-        @keyframes spacing {
-            from {
-                letter-spacing: 0; }
-            to {
-                letter-spacing: -25px; } }
+
         @keyframes subtleSpacing {
             from {
                 letter-spacing: 0;
@@ -870,16 +866,6 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
             </p>
         </td>
         <td class="css">
-            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-                <text text-anchor="middle" x="0" y="40" font-size="80" style="animation: spacing; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;">
-                    SVG
-                </text>
-            </svg>
-            <p>
-                Letter spacing animation
-            </p>
-        </td>
-        <td class="css">
             <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150px" width="150px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" xmlns:dc="http://purl.org/dc/elements/1.1/">
                 <g transform="translate(0 -902.36)">
                     <path id="a" d="m81.864 1001.8c-10.394 8.8304-26.216 6.3477-34.703-3.861-10.296-12.386-7.2945-31.061 4.8803-40.999 14.533-11.863 36.277-8.2985 47.768 5.9986 13.53 16.834 9.3592 41.859-7.2141 55.003-19.286 15.296-47.802 10.476-62.7-8.5254-17.16-21.888-11.648-54.102 9.9312-70.85 24.637-19.121 60.755-12.875 79.451 11.43 6.8978 8.9676 11.151 19.842 12.283 31.092" stroke="#999" stroke-linecap="round" stroke-dasharray="2, 4" fill="none"/>
@@ -889,6 +875,22 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
 
             <p>
                 Letter spacing animation on path
+            </p>
+        </td>
+        <td class="css">
+            <svg width="150" height="150">
+                <text font-size="60" x="10" y="50" style="transform: rotateX(-30deg) rotateZ(30deg) scale(1.5);">
+                    CSS
+                </text>
+                <g transform="translate(75)">
+                    <text text-anchor="middle" class="animate" font-size="30" x="0" y="80" style="animation: spin 4s linear infinite;">
+                        Transform
+                    </text>
+                </g>
+
+            </svg>
+            <p style="animation: spin;">
+                CSS transform on SVG elements
             </p>
         </td>
         <td>
@@ -957,19 +959,10 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
             </p>
         </td>
         <td class="css">
-            <svg width="150" height="150">
-                <text font-size="60" x="10" y="50" style="transform: rotateX(-30deg) rotateZ(30deg) scale(1.5);">
-                    CSS
-                </text>
-                <g transform="translate(75)">
-                    <text text-anchor="middle" class="animate" font-size="30" x="0" y="80" style="animation: spin 4s linear infinite;">
-                        Transform
-                    </text>
-                </g>
 
-            </svg>
-            <p style="animation: spin;">
-                CSS transform on SVG elements
+            <img src="spacinganim.svg"/>
+            <p>
+                Spacing animation inside &lt;img&gt;
             </p>
         </td>
         <td class="css">

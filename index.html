@@ -70,11 +70,7 @@
         }
 
         .sized {
-            font-size: 80;
-        }
-
-        .sizedPX {
-            font-size: 80px;
+            font-size: 70px;
         }
 
         @keyframes rollingAnts {
@@ -230,16 +226,16 @@
     <tr>
         <th></th>
         <th>
-            1
+            A
         </th>
         <th>
-            2
+            B
         </th>
         <th>
-            3
+            C
         </th>
         <th>
-            4
+            D
         </th>
     </tr>
     </thead>
@@ -478,26 +474,26 @@
     <tr>
         <th></th>
         <th>
-            Embedded raster graphics
+            A: Embedded raster graphics
         </th>
         <th>
-            Dashed stroke
+            B: Dashed stroke
         </th>
         <th>
-            Path morphing
+            C: Path morphing
         </th>
         <th>
-            Text on path
+            D: Text on path
         </th>
         <th>
-            Gradient
+            E: Gradient
         </th>
     </tr>
 
     </thead>
     <tbody>
     <tr>
-        <td><p>CSS</p></td>
+        <td><p>3:&nbsp;CSS</p></td>
         <td>
             <svg viewBox="-75 -75 150 150" width="150px" height="150px">
                 <defs>
@@ -546,7 +542,7 @@
     <tr>
         <td>
             <p>
-                JS
+                4: JS
             </p>
         </td>
         <td>
@@ -594,7 +590,7 @@
         </td>
     </tr>
     <tr>
-        <td><p>SMIL</p></td>
+        <td><p>5:&nbsp;SMIL</p></td>
         <td>
             <svg viewBox="-75 -75 150 150" width="150px" height="150px">
                 <defs>
@@ -726,19 +722,19 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
     <thead>
     <tr>
         <th></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+        <th>D</th>
+        <th>E</th>
+        <th>F</th>
+        <th>G</th>
     </tr>
     </thead>
     <tbody>
 
     <tr>
-        <td><p>1</p></td>
+        <td><p>6</p></td>
 
         <td>
             <svg viewBox="-75 -75 150 150" width="150px" height="150px">
@@ -828,10 +824,10 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
         </td>
     </tr>
     <tr>
-        <td><p>2</p></td>
+        <td><p>7</p></td>
         <td>
             <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-                <text text-anchor="middle" x="0" y="40" style="font-size: 70">
+                <text text-anchor="middle" x="0" y="40" style="font-size: 70px">
                     SVG
                 </text>
             </svg>
@@ -856,13 +852,13 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
             <style type="text/css">
 
             </style>
-            <svg viewBox="-75 -75 150 150" width="150px" height="150px">
-                <text text-anchor="middle" x="0" y="40" class="sizedPX">
+            <svg viewBox="-150 -150 300 300" width="150px" height="150px">
+                <text text-anchor="middle" x="0" y="40" class="sized">
                     SVG
                 </text>
             </svg>
             <p>
-                Embedded CSS size (px)
+                Doubled viewbox size
             </p>
         </td>
         <td class="css">
@@ -903,7 +899,7 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
         </td>
     </tr>
     <tr>
-        <td><p>3</p></td>
+        <td><p>8</p></td>
         <td class="js">
             <svg id="polyline" viewBox="0 0 150 150" width="150px" height="150px">
                 <polyline style="stroke: black; stroke-width: 2px; fill: none;" points="25,25 50,150 75,10"></polyline>
@@ -979,7 +975,7 @@ m 18.687822,106.56344 c 7.071068,17.67767 19.950513,32.07234 38.385797,29.29442 
         </td>
     </tr>
     <tr>
-        <td><p>4</p></td>
+        <td><p>9</p></td>
         <td class="click smil">
             <img src="smilpath.svg" />
             <p>
